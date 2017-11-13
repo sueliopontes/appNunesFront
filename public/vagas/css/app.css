@@ -8,6 +8,15 @@
 	background-color:transparent;
 
 }
+body{	
+	background-color:rgb(241, 234, 211);
+
+}
+
+a {
+	color:#53534E;
+}
+
 h3 {
 	margin-bottom: 30px;
 }
@@ -45,11 +54,11 @@ hr {
 .header{
 	width:100%;
 	height:10%;
-	top:5;
+	top:0;
 	left:0;			
 	background-color:rgb(68, 17, 14);
 	text-align: center;			
-	margin-top:5px;
+	margin-top:0px;
 	margin-left:auto;
 	margin-right:auto;
 	color:white;
@@ -67,7 +76,6 @@ hr {
 	margin-right:auto;
 	color:white;
 }
-.input{
-	width:15px;
-	size:10;
+input{	
+	
 }

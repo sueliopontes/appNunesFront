@@ -1,8 +1,8 @@
 {
-  "name": "appVagasFrontEnd",
-  "description": "Projeto Fatec TG - App Vagas - Front-end",
-  "repository": "https://github.com/heroku/node-js-getting-started",
-  "logo": "https://github.com/sueliopontes/appVagasFrontEnd",
+  "name": "appnunuesfront",
+  "description": "Projeto imobiliária - Front-end",
+  "repository": "https://github.com/sueliopontes/appNunesFront",
+  "logo": "https://github.com/sueliopontes/appnunuesfront",
   "keywords": ["node", "express", "heroku"],
   "image": "heroku/nodejs"
 }

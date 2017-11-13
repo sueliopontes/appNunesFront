@@ -1,7 +1,7 @@
 {
-  "name": "appVagasFrontEnd",
+  "name": "appnunesfront",
   "version": "1.0.0",
-  "description": "Projeto Fatec - appVagas Front-end",
+  "description": "Projeto imobiliária - Front-end",
   "engines": {
     "node": "6.11.1"
   },
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sueliopontes/appVagasFrontEnd"
+    "url": "https://github.com/sueliopontes/appNunesFront"
   },
   "keywords": [
     "node",

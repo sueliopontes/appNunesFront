@@ -1,0 +1,11 @@
+<div class="jumbotron">
+	<form name="rcForm">
+		<input class="form-control" type="text" ng-model="rc.empresa" name="empresa" ng-required="true" value=rc.data.empresa placeholder="Empresa"/>
+        <input class="form-control" type="text" ng-model="rc.contato" name="contato" ng-required="true" value=rc.data.contato placeholder="Nome do contato"/>
+        <input class="form-control" type="text" ng-model="rc.telefone" name="telefone" ng-required="true" value=rc.data.telefone placeholder="Telefone"/>
+	
+		
+</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="adicionarRC(rc)" ng-disabled="rcForm.$invalid">Adicionar</button>
+</div>

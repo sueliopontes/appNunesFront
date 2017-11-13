@@ -1,0 +1,20 @@
+<div class="jumbotron">
+	<form name="ocupacaoForm">
+        	
+	<input class="form-control" type="text" ng-model="ocupacao.data.empresa" name="empresa" ng-required="true" value=ocupacao.data.empresa placeholder="Nome da empresa"/>
+        <input class="form-control" type="text" ng-model="ocupacao.data.cnpj" name="cnpj" ng-required="true" value=ocupacao.data.cnpj placeholder="CNPJ"/>
+        <input class="form-control" type="text" ng-model="ocupacao.data.contato" name="contato" ng-required="true" value=ocupacao.data.contato placeholder="Contato"/>
+	<input class="form-control" type="text" ng-model="ocupacao.data.endereco" name="endereco" ng-required="true" value=ocupacao.data.endereco placeholder="Endereço"/>
+	<input class="form-control" type="text" ng-model="ocupacao.data.admissao" name="admissao" ng-required="true" value=ocupacao.data.admissao placeholder="Data de admissão"/>
+	<input class="form-control" type="text" ng-model="ocupacao.data.salario" name="salario" ng-required="true" value=ocupacao.data.salario placeholder="Salário"/>
+	<input class="form-control" type="text" ng-model="ocupacao.data.ocupacao" name="ocupacao" ng-required="true" value=ocupacao.data.ocupacao placeholder="Ocupação"/>
+	<input class="form-control" type="text" ng-model="ocupacao.data.rendas" name="rendas" ng-required="true" value=ocupacao.data.rendas placeholder="Rendas"/>
+	
+	
+        
+	
+
+</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="saveOcupacao(ocupacao.data.id,ocupacao.data)" ng-disabled="ocupacao.dataForm.$invalid">Salvar</button>
+</div>

@@ -1,0 +1,20 @@
+<div class="jumbotron">
+	<form name="locatarioForm">
+        	
+	<input size="10" class="form-control" type="text" ng-model="locatario.data.nome" name="nome" ng-required="true" value=locatario.data.nome placeholder="Nome do locatario"/>
+        <input class="form-control" type="text" ng-model="locatario.data.nascimento" name="nascimento" ng-required="true" value=locatario.data.nascimento placeholder="Data de nascimento"/>
+        <input class="form-control" type="text" ng-model="locatario.data.cpf" name="cpf" ng-required="true" value=locatario.data.cep placeholder="CFP"/>
+	<input class="form-control" type="text" ng-model="locatario.data.rg" name="rg" ng-required="true" value=locatario.data.rg placeholder="RG"/>
+        <input class="form-control" type="text" ng-model="locatario.data.emissor" name="emissor" ng-required="true" value=locatario.data.emissor placeholder="Emissor"/>
+	<input class="form-control" type="text" ng-model="locatario.data.uf" name="uf" ng-required="true" value=locatario.data.uf placeholder="UF"/>
+	<input class="form-control" type="text" ng-model="locatario.data.sexo" name="sexo" ng-required="true" value=locatario.data.sexo placeholder="Sexo"/>
+        <input class="form-control" type="text" ng-model="locatario.data.naturalidade" name="naturalidade" ng-required="true" value=locatario.data.naturalidade placeholder="Naturalidade"/>
+	<input class="form-control" type="text" ng-model="locatario.data.pai" name="pai" ng-required="true" value=locatario.data.pai placeholder="Nome do pai"/>
+	<input class="form-control" type="text" ng-model="locatario.data.mae" name="mae" ng-required="true" value=locatario.data.mae placeholder="Nome do mae"/>
+	<input class="form-control" type="text" ng-model="locatario.data.estado" name="estado" ng-required="true" value=locatario.data.estado placeholder="Estado civil"/>
+	
+
+</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="savelocatario(locatario.data.id,locatario.data)" ng-disabled="locatario.dataForm.$invalid">Salvar</button>
+</div>

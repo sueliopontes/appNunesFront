@@ -1,0 +1,15 @@
+<div class="jumbotron">
+	<form name="bancoForm">
+        	
+	<input class="form-control" type="text" ng-model="banco.data.banco_numero" name="banco_numero" ng-required="true" value=banco.data.banco_numero placeholder="Código do banco"/>
+        <input class="form-control" type="text" ng-model="banco.data.banco_nome" name="banco_nome" ng-required="true" value=banco.data.banco_nome placeholder="Nome do banco"/>
+        <input class="form-control" type="text" ng-model="banco.data.banco_agencia" name="banco_agencia" ng-required="true" value=banco.data.banco_agencia placeholder="Agência"/>
+	<input class="form-control" type="text" ng-model="banco.data.banco_conta" name="banco_conta" ng-required="true" value=banco.data.banco_conta placeholder="Conta"/>
+	<input class="form-control" type="text" ng-model="banco.data.banco_data_abertura" name="banco_data_abertura" ng-required="true" value=banco.data.banco_data_abertura placeholder="Data de abertura da conta"/>
+        
+	
+
+</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="saveBanco(banco.data.id,banco.data)" ng-disabled="banco.dataForm.$invalid">Salvar</button>
+</div>

@@ -1,0 +1,25 @@
+<div class="jumbotron">
+	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?"/>
+	<table ng-show="enderecos.data.length > 0" class="table table-striped">
+		<tr>
+			<th></th>			
+			<th><a href="" ng-click="ordenarPor('logradouro')">Logradouro</a></th>			
+			<th><a href="" ng-click="ordenarPor('numero')">Número</a></th>			
+			<th><a href="" ng-click="ordenarPor('cep')">CEP</a></th>	
+			<th></th>
+			<th></th>		
+		</tr>
+		<tr ng-repeat="endereco in enderecos.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+			<td><input type="checkbox" ng-model="endereco.selecionado"/></td>			
+			<td><a href="">{{endereco.logradouro |name}}</a></td>
+			<td><a href="">{{endereco.numero}}</a></td>
+			<td><a href="">{{endereco.cep}}</a></td>
+			<td><a href="#/enderecoEdit/{{endereco.id}}">Editar</a></td>
+			<td><a ng-click="apagarEndereco(endereco.id)" href="">Excluir</a></td>			
+		</tr>
+		
+	</table>
+	<hr/>
+	<a class="btn btn-primary btn-block" href="#/enderecoNew">Adicionar</a>
+	
+</div>

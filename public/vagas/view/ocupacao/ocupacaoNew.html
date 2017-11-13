@@ -1,0 +1,16 @@
+<div class="jumbotron">
+	<form name="ocupacaoForm">
+		<input class="form-control" type="text" ng-model="ocupacao.empresa" name="empresa" ng-required="true"  placeholder="Nome da empresa"/>
+        <input class="form-control" type="text" ng-model="ocupacao.cnpj" name="cnpj" ng-required="true"  placeholder="CNPJ"/>
+        <input class="form-control" type="text" ng-model="ocupacao.contato" name="contato" ng-required="true" placeholder="Contato"/>
+	<input class="form-control" type="text" ng-model="ocupacao.endereco" name="endereco" ng-required="true" placeholder="Endereço"/>
+	<input class="form-control" type="text" ng-model="ocupacao.admissao" name="admissao" ng-required="true"  placeholder="Data de admissão"/>
+	<input class="form-control" type="text" ng-model="ocupacao.salario" name="salario" ng-required="true"  placeholder="Salário"/>
+	<input class="form-control" type="text" ng-model="ocupacao.ocupacao" name="ocupacao" ng-required="true"  placeholder="Ocupação"/>
+	<input class="form-control" type="text" ng-model="ocupacao.rendas" name="rendas" ng-required="true"  placeholder="Rendas"/>
+	
+		
+</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="adicionarOcupacao(ocupacao)" ng-disabled="ocupacaoForm.$invalid">Adicionar</button>
+</div>

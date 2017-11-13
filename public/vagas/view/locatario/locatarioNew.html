@@ -1,0 +1,18 @@
+<div class="jumbotron">
+	<form name="locatarioForm">
+        <input class="form-control" type="text" ng-model="locatario.nome" name="nome" ng-required="true" placeholder="Nome do locatario"/>
+        <input class="form-control" type="text" ng-model="locatario.nascimento" name="nascimento" ng-required="true" placeholder="Data de nascimento"/>
+        <input class="form-control" type="text" ng-model="locatario.cpf" name="cpf" ng-required="true" placeholder="CFP"/>
+	<input class="form-control" type="text" ng-model="locatario.rg" name="rg" ng-required="true" placeholder="RG"/>
+        <input class="form-control" type="text" ng-model="locatario.emissor" name="emissor" ng-required="true" placeholder="Emissor"/>
+	<input class="form-control" type="text" ng-model="locatario.uf" name="uf" ng-required="true" placeholder="UF"/>
+	<input class="form-control" type="text" ng-model="locatario.sexo" name="sexo" ng-required="true" placeholder="Sexo"/>
+        <input class="form-control" type="text" ng-model="locatario.naturalidade" name="naturalidade" ng-required="true" placeholder="Naturalidade"/>
+	<input class="form-control" type="text" ng-model="locatario.pai" name="pai" ng-required="true" placeholder="Nome do pai"/>
+	<input class="form-control" type="text" ng-model="locatario.mae" name="mae" ng-required="true" placeholder="Nome do mae"/>
+	<input class="form-control" type="text" ng-model="locatario.estado" name="estado" ng-required="true" placeholder="Estado civil"/>
+	
+</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="adicionarLocatario(locatario)" ng-disabled="locatarioForm.$invalid">Adicionar</button>
+</div>

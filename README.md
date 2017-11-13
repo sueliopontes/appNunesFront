@@ -6,6 +6,6 @@
 - Bootstrap
 
 ## Running Locally
-http://appvagasfront.herokuapp.com
+http://appnunesfront.herokuapp.com
 
 

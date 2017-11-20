@@ -1,5 +1,6 @@
 angular.module("app").config(function ($routeProvider) {
 	
+	/*
 	$routeProvider.when("/contato", {
 		templateUrl: "view/contato/contato.html",
 		controller: "contatoCtrl",
@@ -9,6 +10,19 @@ angular.module("app").config(function ($routeProvider) {
 			}
 		}
 	});
+	*/
+	$routeProvider.when("/contato/:id", {
+		templateUrl: "view/contato/contato.html",
+		controller: "contatoCtrl",
+		resolve: {
+			contatos: function (contatoAPI, $route) {
+				return contatoAPI.getContatoUser($route.current.params.id);
+			}
+		}
+	});	
+
+
+
 	$routeProvider.when("/contatoNew", {
 		templateUrl: "view/contato/contatoNew.html",
 		controller: "contatoNewCtrl"			

@@ -7,7 +7,7 @@ angular.module("app").controller("rcNewCtrl", function ($scope,rcAPI,$location,l
             rcAPI.saveRC(rc).success(function (data) {
                 delete $scope.rc;
                 $scope.rcForm.$setPristine();
-                $location.path("/rc"+locatarioId);
+                $location.path("/rc/"+locatarioId);
             });
         };	
         

@@ -7,7 +7,7 @@ angular.module("app").config(function ($routeProvider) {
 			bancos:function(bancoAPI,$route) {
 				return bancoAPI.getBancoUser($route.current.params.id);
 			},
-			bancoId: function ($route) {
+			locatarioId: function ($route) {
 				console.log("controler banco: "+$route.current.params.id);
 				return $route.current.params.id;
 			}
@@ -17,7 +17,7 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/banco/bancoNew.html",
 		controller: "bancoNewCtrl",
 		resolve: {			
-			bancoId: function ($route) {
+			locatarioId: function ($route) {
 				console.log("controler new: "+$route.current.params.id);
 				return $route.current.params.id;
 			}

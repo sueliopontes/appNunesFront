@@ -7,7 +7,7 @@ angular.module("app").config(function ($routeProvider) {
 			enderecos:function(enderecoAPI, $route) {
 				return enderecoAPI.getEnderecoUser($route.current.params.id);
 			},
-			enderecoId: function ($route) {
+			locatarioId: function ($route) {
 				console.log("controler contato: "+$route.current.params.id);
 				return $route.current.params.id;
 			}
@@ -17,7 +17,7 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/endereco/enderecoNew.html",
 		controller: "enderecoNewCtrl",
 		resolve: {			
-			enderecoId: function ($route) {
+			locatarioId: function ($route) {
 				console.log("controler new: "+$route.current.params.id);
 				return $route.current.params.id;
 			}

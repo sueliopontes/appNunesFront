@@ -25,7 +25,7 @@ angular.module("app").factory("rcAPI", function ($http,val) {
 	return {
 		getRCs: _getRCs,
 		getRC: _getRC,
-		getRCUser: _getRcUser,
+		getRCUser: _getRCUser,
 		saveRC: _saveRC,
 		updateRC: _updateRC,
 		deleteRC: _deleteRC

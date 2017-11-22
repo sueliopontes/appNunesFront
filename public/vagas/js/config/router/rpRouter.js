@@ -17,7 +17,7 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/rp/rpNew.html",
 		controller: "rpNewCtrl",
 		resolve: {			
-			rpId: function ($route) {
+			locatarioId: function ($route) {
 				console.log("controler new: "+$route.current.params.id);
 				return $route.current.params.id;
 			}

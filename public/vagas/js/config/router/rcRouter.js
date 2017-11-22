@@ -7,7 +7,7 @@ angular.module("app").config(function ($routeProvider) {
 			rcs:function(rcAPI) {
 				return rcAPI.getRCUser($route.current.params.id);
 			},
-			rcId: function ($route) {
+			locatarioId: function ($route) {
 				console.log("controler contato: "+$route.current.params.id);
 				return $route.current.params.id;
 			}
@@ -17,7 +17,7 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/rc/rcNew.html",
 		controller: "rcNewCtrl",
 		resolve: {			
-			rcId: function ($route) {
+			locatarioId: function ($route) {
 				console.log("controler new: "+$route.current.params.id);
 				return $route.current.params.id;
 			}

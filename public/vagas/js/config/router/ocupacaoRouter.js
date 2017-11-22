@@ -7,7 +7,7 @@ angular.module("app").config(function ($routeProvider) {
 			ocupacaos:function(ocupacaoAPI, $route) {
 				return ocupacaoAPI.getOcupacaoUser($route.current.params.id);
 			},
-			ocupacaoId: function ($route) {
+			locatarioId: function ($route) {
 				console.log("controler contato: "+$route.current.params.id);
 				return $route.current.params.id;
 			}
@@ -17,7 +17,7 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/ocupacao/ocupacaoNew.html",
 		controller: "ocupacaoNewCtrl",
 		resolve: {			
-			ocupacaoId: function ($route) {
+			locatarioId: function ($route) {
 				console.log("controler new: "+$route.current.params.id);
 				return $route.current.params.id;
 			}

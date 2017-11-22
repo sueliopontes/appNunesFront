@@ -31,6 +31,7 @@ angular.module("app").config(function ($routeProvider) {
 		controller: "contatoNewCtrl",
 		resolve: {			
 			locatarioId: function ($route) {
+				console.log("controler: "+$route.current.params.id);
 				return $route.current.params.id;
 			}
 		}			

@@ -1,8 +1,8 @@
 {
-  "name": "appnunuesfront",
+  "name": "appnunesfront",
   "description": "Projeto imobiliária - Front-end",
   "repository": "https://github.com/sueliopontes/appNunesFront",
-  "logo": "https://github.com/sueliopontes/appnunuesfront",
+  "logo": "https://github.com/sueliopontes/appNunesfront",
   "keywords": ["node", "express", "heroku"],
   "image": "heroku/nodejs"
 }

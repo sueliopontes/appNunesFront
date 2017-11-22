@@ -4,7 +4,7 @@ angular.module("app").controller("contatoEditCtrl", function ($scope, $routePara
 		contatoAPI.updateContato(id,contato).success(function (data) {
 			delete $scope.contato;
 			$scope.contatoForm.$setPristine();
-			$location.path("/contato");
+			$location.path("/contato/"+contato.user);
 			
 		});
 	};

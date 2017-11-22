@@ -1,5 +1,5 @@
 angular.module("app").controller("contatoNewCtrl", function ($scope,contatoAPI,$location,locatarioId) {	
-             
+   
         $scope.locatarioId=locatarioId;
         
         $scope.adicionarContato = function (contato) {		

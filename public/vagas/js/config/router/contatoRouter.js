@@ -27,7 +27,7 @@ angular.module("app").config(function ($routeProvider) {
 
 
 
-	$routeProvider.when("/contatoNew", {
+	$routeProvider.when("/contatoNew/:id", {
 		templateUrl: "view/contato/contatoNew.html",
 		controller: "contatoNewCtrl",
 		resolve: {			

@@ -17,6 +17,9 @@ angular.module("app").config(function ($routeProvider) {
 		resolve: {
 			contatos: function (contatoAPI, $route) {
 				return contatoAPI.getContatoUser($route.current.params.id);
+			},
+			locatarioId: function ($route) {
+				return $route.current.params.id;
 			}
 		}
 	});	
@@ -25,7 +28,12 @@ angular.module("app").config(function ($routeProvider) {
 
 	$routeProvider.when("/contatoNew", {
 		templateUrl: "view/contato/contatoNew.html",
-		controller: "contatoNewCtrl"			
+		controller: "contatoNewCtrl",
+		resolve: {			
+			locatarioId: function ($route) {
+				return $route.current.params.id;
+			}
+		}			
 	});
 
 	$routeProvider.when("/contatoEdit/:id", {

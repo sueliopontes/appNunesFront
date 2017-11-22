@@ -1,6 +1,6 @@
-angular.module("app").controller("contatoCtrl", function ($scope, contatos,$location,contatoAPI) {	
+angular.module("app").controller("contatoCtrl", function ($scope, contatos,$location,contatoAPI,locatarioId) {	
 	$scope.contatos = contatos.data;		
-	
+	$scope.locatarioId=locatarioId;
 	$scope.apagarContato = function (id) {
 		contatoAPI.deleteContato(id);				
 	};

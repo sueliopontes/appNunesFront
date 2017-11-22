@@ -1,17 +1,27 @@
 angular.module("app").config(function ($routeProvider) {
 	
-	$routeProvider.when("/endereco", {
+	$routeProvider.when("/endereco/:id", {
 		templateUrl: "view/endereco/endereco.html",
 		controller: "enderecoCtrl",
 		resolve:{
-			enderecos:function(enderecoAPI) {
-				return enderecoAPI.getEnderecos();
+			enderecos:function(enderecoAPI, $route) {
+				return enderecoAPI.getEnderecoUser($route.current.params.id);
+			},
+			enderecoId: function ($route) {
+				console.log("controler contato: "+$route.current.params.id);
+				return $route.current.params.id;
 			}
 		}
 	});
-	$routeProvider.when("/enderecoNew", {
+	$routeProvider.when("/enderecoNew/:id", {
 		templateUrl: "view/endereco/enderecoNew.html",
-		controller: "enderecoNewCtrl"			
+		controller: "enderecoNewCtrl",
+		resolve: {			
+			enderecoId: function ($route) {
+				console.log("controler new: "+$route.current.params.id);
+				return $route.current.params.id;
+			}
+		}				
 	});
 
 	$routeProvider.when("/enderecoEdit/:id", {

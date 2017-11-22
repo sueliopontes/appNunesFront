@@ -6,6 +6,9 @@ angular.module("app").factory("ocupacaoAPI", function ($http,val) {
 	var _getOcupacao = function (id) {
 		return $http.get(val.baseUrl + "/ocupacao/" + id);
 	};
+	var _getOcupacaoUser = function (id) {
+		return $http.get(val.baseUrl + "/ocupacao/user/" + id);
+	};
 
 	var _saveOcupacao = function (ocupacao) {
 		
@@ -22,6 +25,7 @@ angular.module("app").factory("ocupacaoAPI", function ($http,val) {
 	return {
 		getOcupacoes: _getOcupacoes,
 		getOcupacao: _getOcupacao,
+		getOcupacaoUser: _getOcupacaoUser,
 		saveOcupacao: _saveOcupacao,
 		updateOcupacao: _updateOcupacao,
 		deleteOcupacao: _deleteOcupacao

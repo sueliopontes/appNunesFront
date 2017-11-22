@@ -1,17 +1,27 @@
 angular.module("app").config(function ($routeProvider) {
 	
-	$routeProvider.when("/rc", {
+	$routeProvider.when("/rc/:id", {
 		templateUrl: "view/rc/rc.html",
 		controller: "rcCtrl",
 		resolve:{
 			rcs:function(rcAPI) {
-				return rcAPI.getRCs();
+				return rcAPI.getRCUser($route.current.params.id);
+			},
+			rcId: function ($route) {
+				console.log("controler contato: "+$route.current.params.id);
+				return $route.current.params.id;
 			}
 		}
-	});
-	$routeProvider.when("/rcNew", {
+	});	
+	$routeProvider.when("/rcNew/:id", {
 		templateUrl: "view/rc/rcNew.html",
-		controller: "rcNewCtrl"			
+		controller: "rcNewCtrl",
+		resolve: {			
+			rcId: function ($route) {
+				console.log("controler new: "+$route.current.params.id);
+				return $route.current.params.id;
+			}
+		}			
 	});
 
 	$routeProvider.when("/rcEdit/:id", {

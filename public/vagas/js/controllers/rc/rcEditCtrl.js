@@ -3,8 +3,9 @@ angular.module("app").controller("rcEditCtrl", function ($scope, $routeParams, r
 	$scope.saveRC = function (id,rc) {		
 		rcAPI.updateRC(id,rc).success(function (data) {
 			delete $scope.rc;
-			$scope.rcForm.$setPristine();
-			$location.path("/rc");
+			
+			$location.path("/rc/"+rc.user);
+			$scope.contatoForm.$setPristine();
 			
 		});
 	};

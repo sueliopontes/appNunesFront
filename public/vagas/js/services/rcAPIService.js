@@ -6,6 +6,9 @@ angular.module("app").factory("rcAPI", function ($http,val) {
 	var _getRC = function (id) {
 		return $http.get(val.baseUrl + "/rc/" + id);
 	};
+	var _getRCUser = function (id) {
+		return $http.get(val.baseUrl + "/rc/user/" + id);
+	};
 
 	var _saveRC = function (rc) {
 		
@@ -22,6 +25,7 @@ angular.module("app").factory("rcAPI", function ($http,val) {
 	return {
 		getRCs: _getRCs,
 		getRC: _getRC,
+		getRCUser: _getRcUser,
 		saveRC: _saveRC,
 		updateRC: _updateRC,
 		deleteRC: _deleteRC

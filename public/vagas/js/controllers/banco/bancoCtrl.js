@@ -1,5 +1,6 @@
-angular.module("app").controller("bancoCtrl", function ($scope, bancos,$location,bancoAPI) {	
+angular.module("app").controller("bancoCtrl", function ($scope, bancos,$location,bancoAPI,locatarioId) {	
 	$scope.bancos = bancos.data;		
+	$scope.locatarioId=locatarioId;
 	
 	$scope.apagarBanco = function (id) {
 		bancoAPI.deleteBanco(id);				

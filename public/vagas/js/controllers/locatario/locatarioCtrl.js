@@ -1,5 +1,6 @@
 angular.module("app").controller("locatarioCtrl", function ($scope, locatarios,$location,locatarioAPI) {	
-	$scope.locatarios = locatarios.data;		
+	$scope.locatarios = locatarios.data;	
+		
 	
 	$scope.apagarLocatario = function (id) {
 		locatarioAPI.deleteLocatario(id);				

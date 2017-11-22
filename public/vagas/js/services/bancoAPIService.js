@@ -6,6 +6,9 @@ angular.module("app").factory("bancoAPI", function ($http,val) {
 	var _getBanco = function (id) {
 		return $http.get(val.baseUrl + "/banco/" + id);
 	};
+	var _getBancoUser = function (id) {
+		return $http.get(val.baseUrl + "/banco/user/" + id);
+	};
 
 	var _saveBanco = function (banco) {
 		
@@ -22,6 +25,7 @@ angular.module("app").factory("bancoAPI", function ($http,val) {
 	return {
 		getBancos: _getBancos,
 		getBanco: _getBanco,
+		getBancoUser: _getBancoUser,
 		saveBanco: _saveBanco,
 		updateBanco: _updateBanco,
 		deleteBanco: _deleteBanco

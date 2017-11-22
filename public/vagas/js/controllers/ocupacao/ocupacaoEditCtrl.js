@@ -3,8 +3,9 @@ angular.module("app").controller("ocupacaoEditCtrl", function ($scope, $routePar
 	$scope.saveOcupacao = function (id,ocupacao) {		
 		ocupacaoAPI.updateOcupacao(id,ocupacao).success(function (data) {
 			delete $scope.ocupacao;
-			$scope.ocupacaoForm.$setPristine();
-			$location.path("/ocupacao");
+			
+			$location.path("/ocupacao/"+ocupacao.user);
+			$scope.contatoForm.$setPristine();
 			
 		});
 	};

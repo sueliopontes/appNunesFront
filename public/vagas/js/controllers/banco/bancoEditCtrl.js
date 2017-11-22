@@ -3,8 +3,9 @@ angular.module("app").controller("bancoEditCtrl", function ($scope, $routeParams
 	$scope.saveBanco = function (id,banco) {		
 		bancoAPI.updateBanco(id,banco).success(function (data) {
 			delete $scope.banco;
-			$scope.bancoForm.$setPristine();
-			$location.path("/banco");
+			
+			$location.path("/banco/"+banco.user);
+			$scope.contatoForm.$setPristine();
 			
 		});
 	};

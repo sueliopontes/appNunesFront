@@ -1,17 +1,27 @@
 angular.module("app").config(function ($routeProvider) {
 	
-	$routeProvider.when("/rp", {
+	$routeProvider.when("/rp/:id", {
 		templateUrl: "view/rp/rp.html",
 		controller: "rpCtrl",
 		resolve:{
 			rps:function(rpAPI) {
-				return rpAPI.getRPs();
+				return rpAPI.getRPUser($route.current.params.id);
+			},
+			locatarioId: function ($route) {
+				console.log("controler contato: "+$route.current.params.id);
+				return $route.current.params.id;
 			}
 		}
-	});
-	$routeProvider.when("/rpNew", {
+	});	
+	$routeProvider.when("/rpNew/:id", {
 		templateUrl: "view/rp/rpNew.html",
-		controller: "rpNewCtrl"			
+		controller: "rpNewCtrl",
+		resolve: {			
+			rpId: function ($route) {
+				console.log("controler new: "+$route.current.params.id);
+				return $route.current.params.id;
+			}
+		}			
 	});
 
 	$routeProvider.when("/rpEdit/:id", {

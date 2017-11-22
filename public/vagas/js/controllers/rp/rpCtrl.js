@@ -1,5 +1,6 @@
-angular.module("app").controller("rpCtrl", function ($scope, rps,$location,rpAPI) {	
-	$scope.rps = rps.data;		
+angular.module("app").controller("rpCtrl", function ($scope, rps,$location,rpAPI,locatarioId) {	
+	$scope.rps = rps.data;			
+	$scope.locatarioId=locatarioId;
 	
 	$scope.apagarRP = function (id) {
 		rpAPI.deleteRP(id);				

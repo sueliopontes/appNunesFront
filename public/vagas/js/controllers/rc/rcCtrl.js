@@ -1,5 +1,6 @@
-angular.module("app").controller("rcCtrl", function ($scope, rcs,$location,rcAPI) {	
-	$scope.rcs = rcs.data;		
+angular.module("app").controller("rcCtrl", function ($scope, rcs,$location,rcAPI,locatarioId) {	
+	$scope.rcs = rcs.data;			
+	$scope.locatarioId=locatarioId;
 	
 	$scope.apagarRC = function (id) {
 		rcAPI.deleteRC(id);				

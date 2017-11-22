@@ -1,5 +1,6 @@
-angular.module("app").controller("enderecoCtrl", function ($scope, enderecos,$location,enderecoAPI) {	
-	$scope.enderecos = enderecos.data;		
+angular.module("app").controller("enderecoCtrl", function ($scope, enderecos,$location,enderecoAPI,locatarioId) {	
+	$scope.enderecos = enderecos.data;	
+	$scope.locatarioId=locatarioId;
 	
 	$scope.apagarEndereco = function (id) {
 		enderecoAPI.deleteEndereco(id);				

@@ -1,5 +1,6 @@
-angular.module("app").controller("ocupacaoCtrl", function ($scope, ocupacaos,$location,ocupacaoAPI) {	
+angular.module("app").controller("ocupacaoCtrl", function ($scope, ocupacaos,$location,ocupacaoAPI,locatarioId) {	
 	$scope.ocupacaos = ocupacaos.data;		
+	$scope.locatarioId=locatarioId;	
 	
 	$scope.apagarOcupacao = function (id) {
 		ocupacaoAPI.deleteOcupacao(id);				

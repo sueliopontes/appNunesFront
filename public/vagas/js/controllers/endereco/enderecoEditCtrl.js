@@ -3,9 +3,9 @@ angular.module("app").controller("enderecoEditCtrl", function ($scope, $routePar
 	$scope.saveEndereco = function (id,endereco) {		
 		enderecoAPI.updateEndereco(id,endereco).success(function (data) {
 			delete $scope.endereco;
-			
+			//$scope.contatoForm.$setPristine();			
 			$location.path("/endereco/"+endereco.user);
-			$scope.contatoForm.$setPristine();
+			
 			
 		});
 	};

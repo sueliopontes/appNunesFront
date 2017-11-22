@@ -4,7 +4,7 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/rp/rp.html",
 		controller: "rpCtrl",
 		resolve:{
-			rps:function(rpAPI) {
+			rps:function(rpAPI, $route) {
 				return rpAPI.getRPUser($route.current.params.id);
 			},
 			locatarioId: function ($route) {

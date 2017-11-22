@@ -3,10 +3,8 @@ angular.module("app").controller("rpEditCtrl", function ($scope, $routeParams, r
 	$scope.saveRP = function (id,rp) {		
 		rpAPI.updateRP(id,rp).success(function (data) {
 			delete $scope.rp;
-			
-			$location.path("/rp/"+rp.user);
-			$scope.contatoForm.$setPristine();
-			
+			//$scope.contatoForm.$setPristine();			
+			$location.path("/rp/"+rp.user);			
 		});
 	};
 });

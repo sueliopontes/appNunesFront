@@ -4,7 +4,7 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/rc/rc.html",
 		controller: "rcCtrl",
 		resolve:{
-			rcs:function(rcAPI) {
+			rcs:function(rcAPI, $route) {
 				return rcAPI.getRCUser($route.current.params.id);
 			},
 			locatarioId: function ($route) {

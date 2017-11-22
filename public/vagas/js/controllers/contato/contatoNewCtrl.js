@@ -7,7 +7,7 @@ angular.module("app").controller("contatoNewCtrl", function ($scope,contatoAPI,$
             contatoAPI.saveContato(contato).success(function (data) {
                 delete $scope.contato;
                 $scope.contatoForm.$setPristine();
-                $location.path("/contato");
+                $location.path("/contato/"+locatarioId);
             });
         };	
         

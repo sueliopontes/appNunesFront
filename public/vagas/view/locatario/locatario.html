@@ -1,7 +1,13 @@
 <div class="jumbotron">
-		<div class="alert alert-primary" role="alert">
+		<div ng-show="!locatarios.data.length > 0" class="alert alert-danger" role="alert">
+				
+						Nenhum registro de locatário encontrado!
+					  
+		</div>
+		<div ng-show="locatarios.data.length > 0" class="alert alert-primary" role="alert">
 				Locatário
-			      </div>
+		</div>
+		
 	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?"/>
 	<table ng-show="locatarios.data.length > 0" class="table table-striped">
 		<tr>

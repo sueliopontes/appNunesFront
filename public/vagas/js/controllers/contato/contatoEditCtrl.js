@@ -3,7 +3,7 @@ angular.module("app").controller("contatoEditCtrl", function ($scope, $routePara
 	$scope.saveContato = function (id,contato) {		
 		contatoAPI.updateContato(id,contato).success(function (data) {					
 			//$scope.contatoForm.$setPristine();				
-			$location.path("/contato/"+contato.user);	
+			$location.path("/contato/"+$scope.contato.user);	
 			delete $scope.contato;		
 		});
 	};

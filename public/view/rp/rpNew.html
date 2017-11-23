@@ -1,0 +1,16 @@
+<div>
+	<div class="alert alert-danger" role="alert">
+		Referência pessoal - Novo cadastro de referência pessoal
+	</div>
+	<form name="rpForm">
+		<input class="form-control" type="text" ng-model="rp.nome" name="nome" ng-required="true" value=rp.data.nome placeholder="Nome"
+		/>
+		<input class="form-control" type="text" ng-model="rp.telefone" name="telefone" ng-required="true" value=rp.data.telefone
+		 placeholder="Telefone" />
+		<input class="form-control" type="text" ng-model="rp.parentesco" name="parentesco" ng-required="true" value=rp.data.parentesco
+		 placeholder="Parentesco" />
+
+	</form>
+	<hr/>
+	<button class="btn btn-danger btn-block" ng-click="adicionarRP(rp)" ng-disabled="rpForm.$invalid">Adicionar</button>
+</div>

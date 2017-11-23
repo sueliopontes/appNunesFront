@@ -1,0 +1,17 @@
+<div>
+	<div class="alert alert-danger" role="alert">
+		Cadastro de referência pessoal
+	</div>
+	<form name="rpForm">
+
+		<input class="form-control" type="text" ng-model="rp.data.nome" name="nome" ng-required="true" value=rp.data.nome placeholder="Nome"
+		/>
+		<input class="form-control" type="text" ng-model="rp.data.telefone" name="telefone" ng-required="true" value=rp.data.telefone
+		 placeholder="Telefone" />
+		<input class="form-control" type="text" ng-model="rp.data.parentesco" name="parentesco" ng-required="true" value=rp.data.parentesco
+		 placeholder="Parentesco" />
+
+	</form>
+	<hr/>
+	<button class="btn btn-danger btn-block" ng-click="saveRP(rp.data.id,rp.data)" ng-disabled="rp.dataForm.$invalid">Salvar</button>
+</div>

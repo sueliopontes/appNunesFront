@@ -3,11 +3,11 @@ var app = express();
 var cons = require('consolidate');
 
 app.set('port', (process.env.PORT || 5000));
-app.use(express.static(__dirname + '/public/vagas'));
+app.use(express.static(__dirname + '/public'));
 
 app.engine('html', cons.swig);
 app.set('view engine','html');
-app.set('views',__dirname+'/public/vagas');
+app.set('views',__dirname+'/public');
 
 app.get('/',function(req,res){
   res.render('index')});

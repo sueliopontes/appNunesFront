@@ -1,5 +1,14 @@
 <div class="jumbotron">
-	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?"/>
+
+	<div ng-show="!contatos.data.length > 0" class="alert alert-danger" role="alert">
+			
+					Nenhum registro de contatos encontrado!
+				  
+	</div>
+	<div ng-show="contatos.data.length > 0" class="alert alert-primary" role="alert">
+			Contatos
+	</div>
+	
 	<table ng-show="contatos.data.length > 0" class="table table-striped">
 		<tr>
 			<th></th>			

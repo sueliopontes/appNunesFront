@@ -15,7 +15,7 @@ angular.module("app").factory("contatoAPI", function ($http,val) {
 		return $http.post(val.baseUrl + "/contato", contato);
 	};
 	var _updateContato = function (id,contato) {
-		console.log(contato);
+		
 		return $http.put(val.baseUrl + "/contato/" + id, contato);
 	};
 	var _deleteContato = function (id) {		

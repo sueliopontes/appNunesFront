@@ -1,16 +1,5 @@
 angular.module("app").config(function ($routeProvider) {
 	
-	/*
-	$routeProvider.when("/conjuge", {
-		templateUrl: "view/conjuge/conjuge.html",
-		controller: "conjugeCtrl",
-		resolve:{
-			conjuges:function(conjugeAPI) {
-				return conjugeAPI.getconjuges();
-			}
-		}
-	});
-	*/
 	$routeProvider.when("/conjuge/:id", {
 		templateUrl: "view/conjuge/conjuge.html",
 		controller: "conjugeCtrl",

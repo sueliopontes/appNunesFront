@@ -3,23 +3,47 @@
 		Cadastro profissional
 	</div>
 	<form name="ocupacaoForm">
-
+			<div class="form-group col-md-6 col-sm-12 col-xs-12">
+			<label class="align-text-bottom">Nome da Empresa</label>
 		<input class="form-control" type="text" ng-model="ocupacao.data.empresa" name="empresa" ng-required="true" value=ocupacao.data.empresa
 		 placeholder="Nome da empresa" />
+			</div>
+			<div class="form-group col-md-4 col-sm-12 col-xs-12">
+		 <label class="align-text-bottom">CNPJ</label>
 		<input class="form-control" type="text" ng-model="ocupacao.data.cnpj" name="cnpj" ng-required="true" value=ocupacao.data.cnpj
 		 placeholder="CNPJ" />
+			</div>
+
+			<div class="form-group col-md-2 col-sm-12 col-xs-12">
+					<label class="align-text-bottom">Data de Admissão</label>
+					<input class="form-control" type="text" ng-model="ocupacao.data.admissao" name="admissao" ng-required="true" value=ocupacao.data.admissao
+					 placeholder="Data de admissão" />
+			</div>
+			<div class="form-group col-md-4 col-sm-12 col-xs-12">
+		 <label class="align-text-bottom">Telefone</label>
 		<input class="form-control" type="text" ng-model="ocupacao.data.contato" name="contato" ng-required="true" value=ocupacao.data.contato
 		 placeholder="Contato" />
+			</div>
+		 <div class="form-group col-md-6 col-sm-12 col-xs-12">
+		 <label class="align-text-bottom">Endereço</label>
 		<input class="form-control" type="text" ng-model="ocupacao.data.endereco" name="endereco" ng-required="true" value=ocupacao.data.endereco
 		 placeholder="Endereço" />
-		<input class="form-control" type="text" ng-model="ocupacao.data.admissao" name="admissao" ng-required="true" value=ocupacao.data.admissao
-		 placeholder="Data de admissão" />
+		 </div>
+		 <div class="form-group col-md-4 col-sm-12 col-xs-12">
+		 <label class="align-text-bottom">Salário</label>
 		<input class="form-control" type="text" ng-model="ocupacao.data.salario" name="salario" ng-required="true" value=ocupacao.data.salario
 		 placeholder="Salário" />
+		 </div>
+		 <div class="form-group col-md-4 col-sm-12 col-xs-12">
+		 <label class="align-text-bottom">Cargo / Ocupação</label>
 		<input class="form-control" type="text" ng-model="ocupacao.data.ocupacao" name="ocupacao" ng-required="true" value=ocupacao.data.ocupacao
 		 placeholder="Ocupação" />
+		 </div>
+		 <div class="form-group col-md-4 col-sm-12 col-xs-12">
+		 <label class="align-text-bottom">Outras Rendas</label>
 		<input class="form-control" type="text" ng-model="ocupacao.data.rendas" name="rendas" ng-required="true" value=ocupacao.data.rendas
 		 placeholder="Rendas" />
+		 </div>
 
 	</form>
 	<hr/>

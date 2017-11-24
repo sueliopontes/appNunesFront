@@ -3,10 +3,13 @@
 		Referência pessoal - Novo cadastro de referência pessoal
 	</div>
 	<form name="rpForm">
+			<label class="align-text-bottom">Nome da Pessoa de Contato</label>
 		<input class="form-control" type="text" ng-model="rp.nome" name="nome" ng-required="true" value=rp.data.nome placeholder="Nome"
 		/>
+		<label class="align-text-bottom">Telefone</label>
 		<input class="form-control" type="text" ng-model="rp.telefone" name="telefone" ng-required="true" value=rp.data.telefone
 		 placeholder="Telefone" />
+		 <label class="align-text-bottom">Grau de Parentesco</label>
 		<input class="form-control" type="text" ng-model="rp.parentesco" name="parentesco" ng-required="true" value=rp.data.parentesco
 		 placeholder="Parentesco" />
 

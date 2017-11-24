@@ -3,10 +3,13 @@
 		Referência comercial - Novo cadastro de referência comercial
 	</div>
 	<form name="rcForm">
+			<label class="align-text-bottom">Nome da Empresa</label>
 		<input class="form-control" type="text" ng-model="rc.empresa" name="empresa" ng-required="true" value=rc.data.empresa placeholder="Empresa"
 		/>
+		<label class="align-text-bottom">Nome da Pessoa de Contato</label>
 		<input class="form-control" type="text" ng-model="rc.contato" name="contato" ng-required="true" value=rc.data.contato placeholder="Nome do contato"
 		/>
+		<label class="align-text-bottom">Telefone</label>
 		<input class="form-control" type="text" ng-model="rc.telefone" name="telefone" ng-required="true" value=rc.data.telefone
 		 placeholder="Telefone" />
 

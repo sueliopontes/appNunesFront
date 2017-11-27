@@ -1,0 +1,50 @@
+<div>
+	<div ng-show="!locadors.data.length > 0" class="alert alert-danger" role="alert">
+		Nenhum registro de locador encontrado!
+	</div>
+	<div ng-show="locadors.data.length > 0" class="alert alert-danger" role="alert">
+		Locador
+	</div>
+
+	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?" />
+	<table ng-show="locadors.data.length > 0" class="table table-striped">
+		<tr>
+			<th></th>
+			<th>
+				<a href="" ng-click="ordenarPor('nome')">Nome</a>
+			</th>
+			<th>
+				<a href="" ng-click="ordenarPor('cpf')">CPF</a>
+			</th>
+			<th>
+				<a href="" ng-click="ordenarPor('rg')">RG</a>
+			</th>
+			<th></th>
+			<th></th>
+		</tr>
+		<tr ng-repeat="locador in locadors.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+			<td>
+				<input type="checkbox" ng-model="locador.selecionado" />
+			</td>
+			<td>
+				<a href="">{{locador.nome |name}}</a>
+			</td>
+			<td>
+				<a href="">{{locador.cpf}}</a>
+			</td>
+			<td>
+				<a href="">{{locador.rg}}</a>
+			</td>
+			<td>
+				<a href="#/locadorEdit/{{locador.id}}">Visualizar</a>
+			</td>
+			<td>
+				<a ng-click="apagarlocador(locador.id)" href="">Excluir</a>
+			</td>
+		</tr>
+
+	</table>
+	<hr/>
+	<a class="btn btn-primary btn-block" href="#/locadorNew">Adicionar</a>
+
+</div>

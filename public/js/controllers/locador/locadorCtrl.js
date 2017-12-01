@@ -2,11 +2,11 @@ angular.module("app").controller("locadorCtrl", function ($scope, locadors,$loca
 	$scope.locadors = locadors.data;	
 		
 	
-	$scope.apagarlocador = function (id) {
-		locadorAPI.deletelocador(id);				
+	$scope.apagarLocador = function (id) {
+		locadorAPI.deleteLocador(id);				
 	};
 
-	$scope.islocadorsSelecionado = function (locadors) {
+	$scope.isLocadorsSelecionado = function (locadors) {
 		return locadors.some(function (locador) {
 			return locador.data.selecionado;
 		});

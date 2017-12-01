@@ -30,6 +30,8 @@
 <script src="js/config/router/locadorRouter.js"></script>
 <script src="js/config/router/imoveisRouter.js"></script>
 <script src="js/config/router/contratoRouter.js"></script>
+<script src="js/config/router/endereco2Router.js"></script>
+<script src="js/config/router/contato2Router.js"></script>
 
 <script src="js/services/bancoAPIService.js"></script>
 <script src="js/services/rcAPIService.js"></script>
@@ -43,6 +45,8 @@
 <script src="js/services/locadorAPIService.js"></script>
 <script src="js/services/imoveisAPIService.js"></script>
 <script src="js/services/contratoAPIService.js"></script>
+<script src="js/services/contato2APIService.js"></script>
+<script src="js/services/endereco2APIService.js"></script>
 
 
 <script src="js/controllers/locatario/locatarioCtrl.js"></script>
@@ -94,6 +98,14 @@
 <script src="js/controllers/contrato/contratoEditCtrl.js"></script>
 <script src="js/controllers/contrato/contratoNewCtrl.js"></script>
 
+<script src="js/controllers/endereco2/enderecoCtrl.js"></script>
+<script src="js/controllers/endereco2/enderecoNewCtrl.js"></script>
+<script src="js/controllers/endereco2/enderecoEditCtrl.js"></script>
+
+<script src="js/controllers/contato2/contatoCtrl.js"></script>
+<script src="js/controllers/contato2/contatoNewCtrl.js"></script>
+<script src="js/controllers/contato2/contatoEditCtrl.js"></script>
+
 
 
 <body>
@@ -102,10 +114,18 @@
 			<h5>Carregando, por favor aguarde...</h5>
 		</div>
 		<div ng-hide="loading">
-			<div ng-include="'view/header.html'"></div>
-			<div ng-include="'view/menu.html'"></div>
-			<div ng-view></div>
-			<!--<div ng-include="'view/footer.html'"></div>-->
+			<section id="header">
+				<div ng-include="'view/header.html'"></div>
+			</section>
+			<section id="menu">
+				<div ng-include="'view/menu.html'"></div>
+			</section>
+			<section id="body">
+				<div ng-view></div>
+			</section>
+			<section id="footer">
+				<!--<div ng-include="'view/footer.html'"></div>-->
+			</section>
 		</div>
 	</div>
 </body>

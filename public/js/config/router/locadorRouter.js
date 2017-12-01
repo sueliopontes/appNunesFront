@@ -5,7 +5,7 @@ angular.module("app").config(function ($routeProvider) {
 		controller: "locadorCtrl",
 		resolve:{
 			locadors:function(locadorAPI) {
-				return locadorAPI.getlocadors();
+				return locadorAPI.getLocadors();
 			}
 		}
 	});
@@ -19,7 +19,7 @@ angular.module("app").config(function ($routeProvider) {
 		controller: "locadorEditCtrl",
 		resolve: {
 			locador: function (locadorAPI, $route) {
-				return locadorAPI.getlocador($route.current.params.id);
+				return locadorAPI.getLocador($route.current.params.id);
 			}
 		}
 	});	

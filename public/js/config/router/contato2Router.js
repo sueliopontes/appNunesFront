@@ -33,7 +33,7 @@ angular.module("app").config(function ($routeProvider) {
 		controller: "contato2EditCtrl",
 		resolve: {
 			contato: function (contato2API, $route) {
-				return contato2PI.getContato($route.current.params.id);
+				return contato2API.getContato($route.current.params.id);
 			}
 		}
 	});	

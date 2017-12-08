@@ -1,16 +1,5 @@
 angular.module("app").config(function ($routeProvider) {
 	
-	/*
-	$routeProvider.when("/contato", {
-		templateUrl: "view/contato/contato.html",
-		controller: "contatoCtrl",
-		resolve:{
-			contatos:function(contatoAPI) {
-				return contatoAPI.getContatos();
-			}
-		}
-	});
-	*/
 	$routeProvider.when("/contato/:id", {
 		templateUrl: "view/contato/contato.html",
 		controller: "contatoCtrl",

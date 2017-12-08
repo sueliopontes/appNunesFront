@@ -6,9 +6,6 @@ angular.module("app").factory("imoveisAPI", function ($http,val) {
 	var _getImoveis = function (id) {
 		return $http.get(val.baseUrl + "/imoveis/" + id);
 	};
-	var _getImoveisUser = function (id) {
-		return $http.get(val.baseUrl + "/imoveis/user/" + id);
-	};
 
 	var _saveImoveis = function (imoveis) {
 		
@@ -25,7 +22,6 @@ angular.module("app").factory("imoveisAPI", function ($http,val) {
 	return {
 		getImoveiss: _getImoveiss,
 		getImoveis: _getImoveis,
-		getImoveisUser: _getImoveisUser,
 		saveImoveis: _saveImoveis,
 		updateImoveis: _updateImoveis,
 		deleteImoveis: _deleteImoveis

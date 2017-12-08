@@ -1,27 +1,17 @@
 angular.module("app").config(function ($routeProvider) {
 	
-	$routeProvider.when("/imoveis/:id", {
+	$routeProvider.when("/imoveis", {
 		templateUrl: "view/imoveis/imoveis.html",
 		controller: "imoveisCtrl",
 		resolve:{
-			imoveiss:function(imoveisAPI,$route) {
-				return imoveisAPI.getimoveisUser($route.current.params.id);
-			},
-			locatarioId: function ($route) {
-				console.log("controler imoveis: "+$route.current.params.id);
-				return $route.current.params.id;
+			imoveiss:function(imoveisAPI) {
+				return imoveisAPI.getImoveiss();
 			}
 		}
 	});
-	$routeProvider.when("/imoveisNew/:id", {
+	$routeProvider.when("/imoveisNew", {
 		templateUrl: "view/imoveis/imoveisNew.html",
-		controller: "imoveisNewCtrl",
-		resolve: {			
-			locatarioId: function ($route) {
-				console.log("controler new: "+$route.current.params.id);
-				return $route.current.params.id;
-			}
-		}				
+		controller: "imoveisNewCtrl"			
 	});
 
 	$routeProvider.when("/imoveisEdit/:id", {
@@ -29,10 +19,11 @@ angular.module("app").config(function ($routeProvider) {
 		controller: "imoveisEditCtrl",
 		resolve: {
 			imoveis: function (imoveisAPI, $route) {
-				return imoveisAPI.getimoveis($route.current.params.id);
+				return imoveisAPI.getImoveis($route.current.params.id);
 			}
 		}
 	});	
+	
 	
 	
 });

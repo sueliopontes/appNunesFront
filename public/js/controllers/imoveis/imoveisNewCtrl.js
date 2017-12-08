@@ -1,13 +1,10 @@
-angular.module("app").controller("imoveisNewCtrl", function ($scope,imoveisAPI,$location,locatarioId) {	
+angular.module("app").controller("imoveisNewCtrl", function ($scope,imoveisAPI,$location) {	
     
-         $scope.locatarioId=locatarioId;	
-    
-        $scope.adicionarImoveis = function (imoveis) {
-            imoveis.user=locatarioId;			
+        $scope.adicionarImoveis = function (imoveis) {		
             imoveisAPI.saveImoveis(imoveis).success(function (data) {
                 delete $scope.imoveis;
                 $scope.imoveisForm.$setPristine();
-                $location.path("/imoveis/"+locatarioId);
+                $location.path("/imoveis");
             });
         };	
         

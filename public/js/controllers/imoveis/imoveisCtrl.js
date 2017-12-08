@@ -1,13 +1,13 @@
-angular.module("app").controller("imoveisCtrl", function ($scope, imoveiss,$location,imoveisAPI) {	
-	$scope.imoveiss = imoveiss.data;	
+angular.module("app").controller("imoveisCtrl", function ($scope, imoveis,$location,imoveisAPI) {	
+	$scope.imoveis = imoveis.data;	
 		
 	
-	$scope.apagarimoveis = function (id) {
-		imoveisAPI.deleteimoveis(id);				
+	$scope.apagarImovel = function (id) {
+		imoveisAPI.deleteImovel(id);				
 	};
 
-	$scope.isimoveissSelecionado = function (imoveiss) {
-		return imoveiss.some(function (imoveis) {
+	$scope.isImoveisSelecionado = function (imoveis) {
+		return imoveis.some(function (imoveis) {
 			return imoveis.data.selecionado;
 		});
 	};

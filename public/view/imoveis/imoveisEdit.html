@@ -1,26 +1,36 @@
 <div>
 	<div class="alert alert-danger" role="alert">
-		Cadastro de referência bancária
+		Cadastro de imóvel
 	</div>
 
-	<form name="bancoForm">
-		<label class="align-text-bottom">Código do Banco</label>
-		<input class="form-control" type="text" ng-model="banco.data.banco_numero" name="banco_numero" ng-required="true" value=banco.data.banco_numero
-		 placeholder="Código do banco" />
-		 <label class="align-text-bottom">Nome do Banco</label>
-		<input class="form-control" type="text" ng-model="banco.data.banco_nome" name="banco_nome" ng-required="true" value=banco.data.banco_nome
-		 placeholder="Nome do banco" />
-		 <label class="align-text-bottom">Número da Agência Bancária</label>
-		<input class="form-control" type="text" ng-model="banco.data.banco_agencia" name="banco_agencia" ng-required="true" value=banco.data.banco_agencia
-		 placeholder="Agência" />
-		 <label class="align-text-bottom">Número da Conta Bancária</label>
-		<input class="form-control" type="text" ng-model="banco.data.banco_conta" name="banco_conta" ng-required="true" value=banco.data.banco_conta
-		 placeholder="Conta" />
-		 <label class="align-text-bottom">Data da Abertura da canta</label>
-		<input class="form-control" type="text" ng-model="banco.data.banco_data_abertura" name="banco_data_abertura" ng-required="true"
-		 value=banco.data.banco_data_abertura placeholder="Data de abertura da conta" />
+	<form name="imovelForm">
+		<label class="align-text-bottom">Código do imovel</label>
+		<input class="form-control" type="text" ng-model="imovel.data.id" name="id" ng-required="true" value=imovel.data.id
+		 placeholder="Código do imovel" />
+		 <label class="align-text-bottom">Inscrição IPTU</label>
+		 <input class="form-control" type="text" ng-model="imovel.data.iptu" name="iptu" ng-required="true" value=imovel.data.iptu
+		  placeholder="Inscrição IPTU" />
+		 <label class="align-text-bottom">RGI - Água</label>
+		<input class="form-control" type="text" ng-model="imovel.data.agua" name="agua" ng-required="true" value=imovel.data.agua
+		 placeholder="RGI -Água" />
+		 <label class="align-text-bottom">Código EDP - Energia Elétrica</label>
+		<input class="form-control" type="text" ng-model="imovel.data.luz" name="luz" ng-required="true" value=imovel.data.luz
+		 placeholder="Código EDP - Energia Elétrica" />
+		
+		 <label class="align-text-bottom">Observação</label>
+		<input class="form-control" type="text" ng-model="imovel.data.obs" name="obs" ng-required="true"
+		 value=imovel.data.obs placeholder="Observação" />
+		 <div class="form-group col-md-12 col-sm-12 col-xs-12">
+			<hr/>
+		</div>
+
+		<div class="form-group col-md-12 col-sm-12 col-xs-12">
+			
+			<button class="btn btn-danger btn-block" ng-click="saveImovel(imovel.data.id)" ng-disabled="imovel.dataForm.$invalid">Salvar</button>
+		</div>
+		 
+		<div class="form-group col-md-2 col-sm-2">			<a class="btn btn-block aLink" href="#/endereco3/{{locador.data.id}}">Endereço</a>
+		</div>
 
 	</form>
-	<hr/>
-	<button class="btn btn-danger btn-block" ng-click="saveBanco(banco.data.id,banco.data)" ng-disabled="banco.dataForm.$invalid">Salvar</button>
-</div>
+	</div>

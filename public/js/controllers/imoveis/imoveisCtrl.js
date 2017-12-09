@@ -3,7 +3,8 @@ angular.module("app").controller("imoveisCtrl", function ($scope, imoveis,$locat
 		
 	
 	$scope.apagarImovel = function (id) {
-		imoveisAPI.deleteImovel(id);				
+		imoveisAPI.deleteImovel(id);
+		$location.path("/imoveis");				
 	};
 
 	$scope.isImoveisSelecionado = function (imoveis) {

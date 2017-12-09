@@ -24,13 +24,16 @@ angular.module("app").config(function ($routeProvider) {
 		}				
 	});
 
-	$routeProvider.when("/endereco3Edit/:id", {
+	$routeProvider.when("/endereco3Edit/:id/:imovel", {
 		templateUrl: "view/endereco3/enderecoEdit.html",
 		controller: "endereco3EditCtrl",
 		resolve: {
 			endereco: function (endereco3API, $route) {
 				return endereco3API.getEndereco($route.current.params.id);
-			}
+			},
+			imovelId: function ($route) {
+				return $route.current.params.imovel;
+			}			
 		}
 	});	
 	

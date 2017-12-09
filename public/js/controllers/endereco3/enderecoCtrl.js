@@ -3,7 +3,8 @@ angular.module("app").controller("endereco3Ctrl", function ($scope, enderecos,$l
 	$scope.locatarioId=locatarioId;
 	
 	$scope.apagarEndereco = function (id) {
-		endereco3API.deleteEndereco(id);				
+		endereco3API.deleteEndereco(id);	
+		$location.path("/endereco3/"+locatarioId);			
 	};
 
 	$scope.isEnderecosSelecionado = function (enderecos) {

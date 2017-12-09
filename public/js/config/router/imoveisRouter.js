@@ -4,8 +4,8 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/imoveis/imoveis.html",
 		controller: "imoveisCtrl",
 		resolve:{
-			imoveiss:function(imoveisAPI) {
-				return imoveisAPI.getImoveiss();
+			imoveis:function(imoveisAPI) {
+				return imoveisAPI.getImoveis();
 			}
 		}
 	});
@@ -18,8 +18,8 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/imoveis/imoveisEdit.html",
 		controller: "imoveisEditCtrl",
 		resolve: {
-			imoveis: function (imoveisAPI, $route) {
-				return imoveisAPI.getImoveis($route.current.params.id);
+			imovel: function (imoveisAPI, $route) {
+				return imoveisAPI.getImovel($route.current.params.id);
 			}
 		}
 	});	

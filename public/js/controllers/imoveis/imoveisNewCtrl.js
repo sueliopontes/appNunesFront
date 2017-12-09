@@ -1,9 +1,9 @@
 angular.module("app").controller("imoveisNewCtrl", function ($scope,imoveisAPI,$location) {	
     
-        $scope.adicionarImoveis = function (imoveis) {		
-            imoveisAPI.saveImoveis(imoveis).success(function (data) {
-                delete $scope.imoveis;
-                $scope.imoveisForm.$setPristine();
+        $scope.adicionarImovel = function (imovel) {		
+            imoveisAPI.saveImovel(imovel).success(function (data) {
+                delete $scope.imovel;
+                $scope.imovelForm.$setPristine();
                 $location.path("/imoveis");
             });
         };	

@@ -1,13 +1,15 @@
 <div>
-	<div ng-show="!imovels.data.length > 0" class="alert alert-danger" role="alert">
+	<div ng-show="!imoveis.data.length > 0" class="alert alert-danger" role="alert">
 
 		Nenhum registro de imóvel encontrado!
 
 	</div>
-	<div ng-show="imovels.data.length > 0" class="alert alert-danger" role="alert">
+	<div ng-show="imoveis.data.length > 0" class="alert alert-danger" role="alert">
 		Imóveis
+	</br>
+	{{imoveis}}
 	</div>
-	<table ng-show="imovels.data.length > 0" class="table table-striped">
+	<table ng-show="imoveis.data.length > 0" class="table table-striped">
 		<tr>
 			<th></th>
 			<th>
@@ -20,15 +22,15 @@
 			<th></th>
 			<th></th>
 		</tr>
-		<tr ng-repeat="imovel in imovels.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+		<tr ng-repeat="imovel in imoveis.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
 			<td>
 				<input type="checkbox" ng-model="imovel.selecionado" />
 			</td>
 			<td>
-				<a href="">{{imovel.imovel_id |name}}</a>
+				<a href="">{{imovel.id}}</a>
 			</td>
 			<td>
-				<a href="">{{imovel.imovel_locador_id}}</a>
+				<a href="">{{imovel.locador_id}}</a>
 			</td>
 			
 			<td>

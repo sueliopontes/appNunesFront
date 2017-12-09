@@ -22,7 +22,7 @@ angular.module("app").factory("imoveisAPI", function ($http,val) {
 	return {
 		getImoveis: _getImoveis,
 		getImovel: _getImovel,
-		saveImoveis: _saveImoveis,
+		saveImovel: _saveImovel,
 		updateImovel: _updateImovel,
 		deleteImovel: _deleteImovel
 	};

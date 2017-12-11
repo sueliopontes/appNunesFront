@@ -3,9 +3,7 @@ angular.module("app").config(function ($routeProvider) {
 	$routeProvider.when("/", {
 		templateUrl: "view/inicio.html"
 	});
-	$routeProvider.when("/inicio", {
-		templateUrl: "view/inicio.html"
-	});	
+	
 
 	$routeProvider.when("/error", {
 		templateUrl: "view/error.html"

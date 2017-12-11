@@ -6,31 +6,38 @@
 	</div>
 	<div ng-show="imoveis.data.length > 0" class="alert alert-danger" role="alert">
 		Imóveis
-	</br>
-	{{imoveis}}
 	</div>
 	<table ng-show="imoveis.data.length > 0" class="table table-striped">
-		<tr>
-			<th></th>
+		<tr>			
 			<th>
 				<a href="" ng-click="ordenarPor('imovel_id')">Código</a>
 			</th>
 			<th>
 				<a href="" ng-click="ordenarPor('imovel_locador_id')">Locador</a>
 			</th>
+			<th>
+				<a href="" ng-click="ordenarPor('imovel_id')">Bairro</a>
+			</th>
+			<th>
+				<a href="" ng-click="ordenarPor('imovel_locador_id')">Endereço</a>
+			</th>
 			
 			<th></th>
 			<th></th>
 		</tr>
 		<tr ng-repeat="imovel in imoveis.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
-			<td>
-				<input type="checkbox" ng-model="imovel.selecionado" />
-			</td>
+			
 			<td>
 				<a href="">{{imovel.id}}</a>
 			</td>
 			<td>
-				<a href="">{{imovel.locador_id}}</a>
+				<a href="">{{imovel.nome}}</a>
+			</td>
+			<td>
+				<a href="">{{imovel.bairro}}</a>
+			</td>
+			<td>
+				<a href="">{{imovel.logradouro}}</a>
 			</td>
 			
 			<td>

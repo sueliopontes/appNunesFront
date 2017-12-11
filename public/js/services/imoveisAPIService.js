@@ -1,6 +1,6 @@
 angular.module("app").factory("imoveisAPI", function ($http,val) {
 	var _getImoveis = function () {
-		return $http.get(val.baseUrl + "/imoveis");
+		return $http.get(val.baseUrl + "/imoveisFull");
 	};
 
 	var _getImovel = function (id) {

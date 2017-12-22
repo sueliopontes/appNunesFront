@@ -5,9 +5,10 @@ angular.module("app").controller("bancoNewCtrl", function ($scope,bancoAPI,$loca
         $scope.adicionarBanco = function (banco) {
             banco.user=locatarioId;			
             bancoAPI.saveBanco(banco).success(function (data) {
-                delete $scope.banco;
-                $scope.bancoForm.$setPristine();
-                $location.path("/banco/"+locatarioId);
+                //delete $scope.banco;
+                //$scope.bancoForm.$setPristine();
+                //$location.path("/banco/"+locatarioId);
+                $location.path("/rpNew/"+locatarioId);
             });
         };	
         

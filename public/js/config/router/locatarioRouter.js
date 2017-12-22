@@ -10,6 +10,7 @@ angular.module("app").config(function ($routeProvider) {
 		}
 	});
 	$routeProvider.when("/locatarioNew", {
+		//templateUrl: "view/manutencao.html"
 		templateUrl: "view/locatario/locatarioNew.html",
 		controller: "locatarioNewCtrl"			
 	});

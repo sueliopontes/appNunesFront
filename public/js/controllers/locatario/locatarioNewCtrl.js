@@ -2,9 +2,11 @@ angular.module("app").controller("locatarioNewCtrl", function ($scope,locatarioA
     
         $scope.adicionarLocatario = function (locatario) {		
             locatarioAPI.saveLocatario(locatario).success(function (data) {
-                delete $scope.locatario;
-                $scope.locatarioForm.$setPristine();
-                $location.path("/locatario");
+                console.log(data.data.id);
+                //delete $scope.locatario;
+                //$scope.locatarioForm.$setPristine();
+               // $location.path("/locatario");
+                $location.path("/enderecoNew/"+data.data.id);
             });
         };	
         

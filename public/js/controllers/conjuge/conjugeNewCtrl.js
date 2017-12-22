@@ -5,9 +5,10 @@ angular.module("app").controller("conjugeNewCtrl", function ($scope,conjugeAPI,$
         $scope.adicionarConjuge = function (conjuge) {
             conjuge.user=locatarioId;		
             conjugeAPI.saveConjuge(conjuge).success(function (data) {
-                delete $scope.conjuge;
-                $scope.conjugeForm.$setPristine();
-                $location.path("/conjuge/"+locatarioId);
+                //delete $scope.conjuge;
+                //$scope.conjugeForm.$setPristine();
+                //$location.path("/conjuge/"+locatarioId);
+                $location.path("/ocupacaoNew/"+locatarioId);
             });
         };	
         

@@ -5,9 +5,10 @@ angular.module("app").controller("rcNewCtrl", function ($scope,rcAPI,$location,l
         $scope.adicionarRC = function (rc) {		
             rc.user=locatarioId;	
             rcAPI.saveRC(rc).success(function (data) {
-                delete $scope.rc;
-                $scope.rcForm.$setPristine();
-                $location.path("/rc/"+locatarioId);
+                //delete $scope.rc;
+                //$scope.rcForm.$setPristine();
+                //$location.path("/rc/"+locatarioId);
+                $location.path("/locatarioEdit/"+locatarioId);
             });
         };	
         

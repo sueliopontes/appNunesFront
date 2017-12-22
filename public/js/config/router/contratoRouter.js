@@ -13,11 +13,14 @@ angular.module("app").config(function ($routeProvider) {
 			}
 		}
 	});
-	$routeProvider.when("/contratoNew/:id", {
+	$routeProvider.when("/contratoNew", {
 		templateUrl: "view/contrato/contratoNew.html",
 		controller: "contratoNewCtrl",
-		resolve: {			
-			locatarioId: function ($route) {
+		resolve: {
+			locatarios:function(locatarioAPI,$route) {
+				return locatarioAPI.getLocatarios();
+			},			
+			locatarios: function ($route) {
 				console.log("controler new: "+$route.current.params.id);
 				return $route.current.params.id;
 			}

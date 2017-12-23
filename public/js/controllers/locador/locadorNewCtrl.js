@@ -1,7 +1,7 @@
-angular.module("app").controller("locadorNewCtrl", function ($scope,locadorAPI,$location) {	
+angular.module("app").controller("locadorNewCtrl", function ($scope,pessoaAPI,$location) {	
     
         $scope.adicionarLocador = function (locador) {		
-            locadorAPI.saveLocador(locador).success(function (data) {
+            pessoaAPI.savePessoa(locador).success(function (data) {
                 delete $scope.locador;
                 $scope.locadorForm.$setPristine();
                 $location.path("/locador");

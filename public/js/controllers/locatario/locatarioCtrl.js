@@ -1,38 +1,24 @@
-angular.module("app").controller("locatarioCtrl", function ($scope, locatarios,$location,locatarioAPI) {	
-	$scope.locatarios = locatarios.data;	
-		
-	
+angular.module("app").controller("locatarioCtrl", function ($scope, locatarios,$location,pessoaAPI) {	
+	$scope.locatarios = locatarios.data;
+
 	$scope.apagarLocatario = function (locatario) {
-		locatarioAPI.deleteLocatario(locatario.id);		
+		pessoaAPI.deletePessoa(pessoa.id);		
 		/*
-		$scope.locatarios= locatarios.filter(function (locatario) {
-			if (!locatario.id==id) return locatario;
-		});		
-*/
+			$scope.locatarios= locatarios.filter(function (locatario) {
+				if (!locatario.id==id) return locatario;
+			});		
+		*/
 		carregarDados();
-		$location.path("/locatario");
-
-		
-	};
-
-	$scope.isLocatariosSelecionado = function (locatarios) {
-		return locatarios.some(function (locatario) {
-			return locatario.data.selecionado;
-		});
-	};
-
-	
-	
-	$scope.ordenarPor = function (campo) {
-		$scope.criterioDeOrdenacao = campo;
-		$scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
+		//console.log($scope.locatarios);
+		//$location.path("/locatario");		
 	};	
 
 	var carregarDados = function () {
-		locatarioAPI.getLocatarios().success(function(data){
-			console.log("oi");
-			$scope.locatarios = locatarios.data;	
-		});		
+		pessoaAPI.getLocatarios().success(function(data){
+			console.log(data.data);
+			this.locatarios = data.data;	
+		});	
+		$scope.locatarios = null;	
 	};
 	
 });

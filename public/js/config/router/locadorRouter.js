@@ -4,8 +4,8 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/locador/locador.html",
 		controller: "locadorCtrl",
 		resolve:{
-			locadors:function(locadorAPI) {
-				return locadorAPI.getLocadors();
+			locadores:function(pessoaAPI) {
+				return pessoaAPI.getLocadores();
 			}
 		}
 	});
@@ -18,8 +18,8 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/locador/locadorEdit.html",
 		controller: "locadorEditCtrl",
 		resolve: {
-			locador: function (locadorAPI, $route) {
-				return locadorAPI.getLocador($route.current.params.id);
+			locador: function (pessoaAPI, $route) {
+				return pessoaAPI.getPessoa($route.current.params.id);
 			}
 		}
 	});	

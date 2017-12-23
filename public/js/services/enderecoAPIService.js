@@ -1,13 +1,7 @@
 angular.module("app").factory("enderecoAPI", function ($http,val) {
-	var _getEnderecos = function () {
-		return $http.get(val.baseUrl + "/endereco");
-	};
-
+	
 	var _getEndereco = function (id) {
 		return $http.get(val.baseUrl + "/endereco/" + id);
-	};
-	var _getEnderecoUser = function (id) {
-		return $http.get(val.baseUrl + "/endereco/user/" + id);
 	};
 
 	var _saveEndereco = function (endereco) {
@@ -22,10 +16,8 @@ angular.module("app").factory("enderecoAPI", function ($http,val) {
 		return $http.delete(val.baseUrl + "/endereco/" + id);
 	};
 
-	return {
-		getEnderecos: _getEnderecos,
-		getEndereco: _getEndereco,
-		getEnderecoUser: _getEnderecoUser,
+	return {		
+		getEndereco: _getEndereco,		
 		saveEndereco: _saveEndereco,
 		updateEndereco: _updateEndereco,
 		deleteEndereco: _deleteEndereco

@@ -4,8 +4,8 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/banco/banco.html",
 		controller: "bancoCtrl",
 		resolve:{
-			bancos:function(bancoAPI,$route) {
-				return bancoAPI.getBancoUser($route.current.params.id);
+			banco:function(bancoAPI,$route) {
+				return bancoAPI.getBanco($route.current.params.id);
 			},
 			locatarioId: function ($route) {
 				console.log("controler banco: "+$route.current.params.id);

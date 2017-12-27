@@ -6,11 +6,11 @@ angular.module("app").config(function ($routeProvider) {
 			imoveis:function(imoveisAPI) {
 				return imoveisAPI.getImoveis();
 			},
-			locatarios:function(locatarioAPI) {
-				return locatarioAPI.getLocatarios();
+			locatarios:function(pessoaAPI) {
+				return pessoaAPI.getLocatarios();
 			},
-			locadors:function(locadorAPI) {
-				return locadorAPI.getLocadors();
+			locadores:function(pessoaAPI) {
+				return pessoaAPI.getLocadores();
 			}
 			
 		}

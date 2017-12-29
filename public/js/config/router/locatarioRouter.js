@@ -9,6 +9,7 @@ angular.module("app").config(function ($routeProvider) {
 			}
 		}
 	});
+	
 	$routeProvider.when("/locatarioNew", {
 		templateUrl: "view/locatario/locatarioNew.html",
 		controller: "locatarioNewCtrl"			

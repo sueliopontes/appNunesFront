@@ -5,9 +5,9 @@ angular.module("app").config(function ($routeProvider) {
 		controller: "conjugeCtrl",
 		resolve: {
 			conjuges: function (conjugeAPI, $route) {
-				return conjugeAPI.getConjugeUser($route.current.params.id);
+				return conjugeAPI.getConjuges($route.current.params.id);
 			},
-			locatarioId: function ($route) {				
+			pessoaId: function ($route) {				
 				return $route.current.params.id;
 			}
 		}
@@ -19,7 +19,7 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/conjuge/conjugeNew.html",
 		controller: "conjugeNewCtrl",
 		resolve: {			
-			locatarioId: function ($route) {				
+			pessoaId: function ($route) {				
 				return $route.current.params.id;
 			}
 		}			
@@ -31,6 +31,9 @@ angular.module("app").config(function ($routeProvider) {
 		resolve: {
 			conjuge: function (conjugeAPI, $route) {
 				return conjugeAPI.getConjuge($route.current.params.id);
+			},
+			pessoaId: function ($route) {				
+				return $route.current.params.id;
 			}
 		}
 	});	

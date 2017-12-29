@@ -22,9 +22,6 @@
 			 placeholder="Sexo" />
 		</div>
 
-
-
-
 		<div class="form-group col-md-3 col-sm-12 col-xs-12">
 				<label class="align-text-bottom">Estado</label>
 			<input class="form-control" type="text" ng-model="locatario.data.estado" name="estado" ng-required="true" value=locatario.data.estado
@@ -76,7 +73,7 @@
 		</div>
 
 		<div class="form-group col-md-12 col-sm-12 col-xs-12">
-			<button class="btn btn-danger btn-block" ng-click="savelocatario(locatario.data.id,locatario.data)" ng-disabled="locatario.dataForm.$invalid">Salvar</button>
+			<button class="btn btn-danger btn-block" ng-click="saveLocatario(locatario.data.id,locatario.data)" ng-disabled="locatario.dataForm.$invalid">Salvar</button>
 		</div>
 		
 		<div class="form-group col-md-2 col-sm-2">

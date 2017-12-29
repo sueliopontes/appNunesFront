@@ -1,6 +1,7 @@
-{{endereco}}
 <div ng-show="!endereco.length > 0" class="alert alert-danger" role="alert">
 	Nenhum registro de endereço encontrado!
+	<hr/>
+	<a class="btn btn-primary btn-block" href="#/enderecoNew/{{pessoaId}}">Adicionar</a>
 </div>
 <div ng-show="enderecos.data.length > 0" class="alert alert-danger" role="alert">
 	<div>

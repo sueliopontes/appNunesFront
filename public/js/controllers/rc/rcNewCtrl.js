@@ -1,14 +1,14 @@
-angular.module("app").controller("rcNewCtrl", function ($scope,rcAPI,$location,locatarioId) {	
+angular.module("app").controller("rcNewCtrl", function ($scope,rcAPI,$location,pessoaId) {	
     
-         $scope.locatarioId=locatarioId;
+         $scope.pessoaId=pessoaId;
     
         $scope.adicionarRC = function (rc) {		
-            rc.user=locatarioId;	
+            rc.user=pessoaId;	
             rcAPI.saveRC(rc).success(function (data) {
                 //delete $scope.rc;
                 //$scope.rcForm.$setPristine();
                 //$location.path("/rc/"+locatarioId);
-                $location.path("/locatarioEdit/"+locatarioId);
+                $location.path("/locatarioEdit/"+pessoaId);
             });
         };	
         

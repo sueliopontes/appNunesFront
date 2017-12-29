@@ -1,6 +1,11 @@
-<div>
-	<div class="alert alert-danger" role="alert">
-		Cadastro profissional
+<div ng-show="!ocupacao.length > 0" class="alert alert-danger" role="alert">
+	Nenhum registro profissional encontrado!
+	<hr/>
+	<a class="btn btn-primary btn-block" href="#/ocupacaoNew/{{pessoaId}}">Adicionar</a>
+</div>
+<div ng-show="ocupacao.data.length > 0" class="alert alert-danger" role="alert">
+	<div>
+		<div class="alert alert-danger" role="alert">Cadastro de registro profissional</div>	
 	</div>
 	<form name="ocupacaoForm">
 			<div class="form-group col-md-6 col-sm-12 col-xs-12">

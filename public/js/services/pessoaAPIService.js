@@ -4,25 +4,25 @@ angular.module("app").factory("pessoaAPI", function ($http,val) {
 	};
 
 	var _getLocatarios = function () {
-		return $http.get(val.baseUrl + "/locatario");
+		return $http.get(val.baseUrl + "/locatarios");
 	};
 
 	var _getLocadores = function () {
-		return $http.get(val.baseUrl + "/locador");
+		return $http.get(val.baseUrl + "/locadores");
 	};
 
 	var _getPessoa = function (id) {
 		return $http.get(val.baseUrl + "/pessoa/" + id);
 	};
 
-	var _savePessoa = function (pessoa) {
-		
+	var _savePessoa = function (pessoa) {				
 		return $http.post(val.baseUrl + "/pessoa", pessoa);
 	};
-	var _updatePessoa = function (id,pessoa) {
-		console.log(pessoa);
+
+	var _updatePessoa = function (id,pessoa) {	
 		return $http.put(val.baseUrl + "/pessoa/" + id, pessoa);
 	};
+	
 	var _deletePessoa = function (id) {		
 		return $http.delete(val.baseUrl + "/pessoa/" + id);
 	};

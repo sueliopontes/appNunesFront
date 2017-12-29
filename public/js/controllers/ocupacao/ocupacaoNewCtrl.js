@@ -1,15 +1,14 @@
-angular.module("app").controller("ocupacaoNewCtrl", function ($scope,ocupacaoAPI,$location,locatarioId,locatarioId) {	
+angular.module("app").controller("ocupacaoNewCtrl", function ($scope,ocupacaoAPI,$location,pessoaId) {	
     
-         $scope.locatarioId=locatarioId;	 
-         
+         $scope.pessoaId=pessoaId;	         
     
         $scope.adicionarOcupacao = function (ocupacao) {
-            ocupacao.user=locatarioId;			
+            ocupacao.user=pessoaId;			
             ocupacaoAPI.saveOcupacao(ocupacao).success(function (data) {
                 //delete $scope.ocupacao;
                 //$scope.ocupacaoForm.$setPristine();
                 //$location.path("/ocupacao/"+locatarioId);
-                $location.path("/bancoNew/"+locatarioId);
+                $location.path("/bancoNew/"+pessoaId);
             });
         };	
         

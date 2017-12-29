@@ -1,10 +1,12 @@
-angular.module("app").controller("contatoEditCtrl", function ($scope, $routeParams, contato,contatoAPI,$location) {
+angular.module("app").controller("contatoEditCtrl", function ($scope, $routeParams, pessoaId,contato,contatoAPI,$location) {
 	$scope.contato = contato.data;
+	$scope.pessoaId=pessoaId;
+	
 	$scope.saveContato = function (id,contato) {		
 		contatoAPI.updateContato(id,contato).success(function (data) {					
-			//$scope.contatoForm.$setPristine();				
-			$location.path("/contato/"+$scope.contato.user);	
-			delete $scope.contato;		
+			//delete $scope.endereco;
+			//$scope.contatoForm.$setPristine();			
+			$location.path("/contatoEdit/"+pessoaId);
 		});
 	};
 });

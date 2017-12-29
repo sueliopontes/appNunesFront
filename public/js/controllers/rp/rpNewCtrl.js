@@ -1,14 +1,14 @@
-angular.module("app").controller("rpNewCtrl", function ($scope,rpAPI,$location,locatarioId) {	
+angular.module("app").controller("rpNewCtrl", function ($scope,rpAPI,$location,pessoaId) {	
     
-         $scope.locatarioId=locatarioId;	
+         $scope.pessoaoId=pessoaId;	
     
         $scope.adicionarRP = function (rp) {	
-            rp.user=locatarioId;		
+            rp.user=pessoaId;		
             rpAPI.saveRP(rp).success(function (data) {
                 //delete $scope.rp;
                 //$scope.rpForm.$setPristine();
                 //$location.path("/rp/"+locatarioId);
-                $location.path("/rcNew/"+locatarioId);
+                $location.path("/rcNew/"+pessoaId);
             });
         };	
         

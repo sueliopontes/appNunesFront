@@ -1,6 +1,11 @@
-<div>
-	<div class="alert alert-danger" role="alert">
-		Cadastro de referência comercial
+<div ng-show="!rc.length > 0" class="alert alert-danger" role="alert">
+	Nenhum registro de referência comercial encontrado!
+	<hr/>
+	<a class="btn btn-primary btn-block" href="#/rcNew/{{pessoaId}}">Adicionar</a>
+</div>
+<div ng-show="rc.data.length > 0" class="alert alert-danger" role="alert">
+	<div>
+		<div class="alert alert-danger" role="alert">Cadastro de referência comercial</div>	
 	</div>
 	<form name="rcForm">
 			<label class="align-text-bottom">Nome da Empresa</label>

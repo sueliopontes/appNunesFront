@@ -1,6 +1,11 @@
-<div>
-	<div class="alert alert-danger" role="alert">
-		Cadastro de referência pessoal
+<div ng-show="!rp.length > 0" class="alert alert-danger" role="alert">
+	Nenhum registro de referência pessoal encontrado!
+	<hr/>
+	<a class="btn btn-primary btn-block" href="#/rpNew/{{pessoaId}}">Adicionar</a>
+</div>
+<div ng-show="rp.data.length > 0" class="alert alert-danger" role="alert">
+	<div>
+		<div class="alert alert-danger" role="alert">Cadastro de referência pessoal</div>	
 	</div>
 	<form name="rpForm">
 			<label class="align-text-bottom">Nome da Pessoa</label>

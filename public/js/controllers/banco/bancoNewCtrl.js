@@ -1,14 +1,14 @@
-angular.module("app").controller("bancoNewCtrl", function ($scope,bancoAPI,$location,locatarioId) {	
+angular.module("app").controller("bancoNewCtrl", function ($scope,bancoAPI,$location,pessoaId) {	
     
-         $scope.locatarioId=locatarioId;	
+         $scope.pessoaId=pessoaId;	
     
         $scope.adicionarBanco = function (banco) {
-            banco.user=locatarioId;			
+            banco.user=pessoaId;			
             bancoAPI.saveBanco(banco).success(function (data) {
                 //delete $scope.banco;
                 //$scope.bancoForm.$setPristine();
                 //$location.path("/banco/"+locatarioId);
-                $location.path("/rpNew/"+locatarioId);
+                $location.path("/rpNew/"+pessoaId);
             });
         };	
         

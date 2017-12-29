@@ -1,14 +1,14 @@
-angular.module("app").controller("contatoNewCtrl", function ($scope,contatoAPI,$location,locatarioId) {	
+angular.module("app").controller("contatoNewCtrl", function ($scope,contatoAPI,$location,pessoaId) {	
    
-        $scope.locatarioId=locatarioId;
+        $scope.pessoaId=pessoaId;
         
         $scope.adicionarContato = function (contato) {
-            contato.user=locatarioId;		
+            contato.user=pessoaId;		
             contatoAPI.saveContato(contato).success(function (data) {
                // delete $scope.contato;
                 //$scope.contatoForm.$setPristine();
                 //$location.path("/contato/"+locatarioId);
-                $location.path("/conjugeNew/"+locatarioId);
+                $location.path("/conjugeNew/"+pessoaId);
             });
         };	
         

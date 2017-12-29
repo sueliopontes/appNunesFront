@@ -1,24 +1,10 @@
-angular.module("app").config(function ($routeProvider) {
-	
-	$routeProvider.when("/ocupacao/:id", {
-		templateUrl: "view/ocupacao/ocupacao.html",
-		controller: "ocupacaoCtrl",
-		resolve:{
-			ocupacaos:function(ocupacaoAPI, $route) {
-				return ocupacaoAPI.getOcupacaoUser($route.current.params.id);
-			},
-			locatarioId: function ($route) {
-				console.log("controler contato: "+$route.current.params.id);
-				return $route.current.params.id;
-			}
-		}
-	});	
+angular.module("app").config(function ($routeProvider) {	
+
 	$routeProvider.when("/ocupacaoNew/:id", {
 		templateUrl: "view/ocupacao/ocupacaoNew.html",
 		controller: "ocupacaoNewCtrl",
 		resolve: {			
-			locatarioId: function ($route) {
-				console.log("controler new: "+$route.current.params.id);
+			pessoaId: function ($route) {				
 				return $route.current.params.id;
 			}
 		}					
@@ -30,6 +16,9 @@ angular.module("app").config(function ($routeProvider) {
 		resolve: {
 			ocupacao: function (ocupacaoAPI, $route) {
 				return ocupacaoAPI.getOcupacao($route.current.params.id);
+			},
+			pessoaId: function ($route) {				
+				return $route.current.params.id;
 			}
 		}
 	});	

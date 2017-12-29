@@ -1,15 +1,9 @@
-angular.module("app").factory("contatoAPI", function ($http,val) {
-	var _getContatos = function () {
-		return $http.get(val.baseUrl + "/contato");
-	};
+angular.module("app").factory("contatoAPI", function ($http,val) {	
 
 	var _getContato = function (id) {
 		return $http.get(val.baseUrl + "/contato/" + id);
 	};
-
-	var _getContatoUser = function (id) {
-		return $http.get(val.baseUrl + "/contato/user/" + id);
-	};
+	
 	var _saveContato = function (contato) {
 		
 		return $http.post(val.baseUrl + "/contato", contato);
@@ -23,9 +17,7 @@ angular.module("app").factory("contatoAPI", function ($http,val) {
 	};
 
 	return {
-		getContatos: _getContatos,
-		getContato: _getContato,
-		getContatoUser: _getContatoUser,
+		getContato: _getContato,		
 		saveContato: _saveContato,
 		updateContato: _updateContato,
 		deleteContato: _deleteContato

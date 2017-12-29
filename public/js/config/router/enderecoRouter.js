@@ -4,7 +4,7 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/endereco/enderecoNew.html",
 		controller: "enderecoNewCtrl",
 		resolve: {			
-			id: function ($route) {				
+			pessoaId: function ($route) {				
 				return $route.current.params.id;
 			}
 		}				
@@ -17,7 +17,7 @@ angular.module("app").config(function ($routeProvider) {
 			endereco: function (enderecoAPI, $route) {
 				return enderecoAPI.getEndereco($route.current.params.id);
 			},
-			id: function ($route) {				
+			pessoaId: function ($route) {				
 				return $route.current.params.id;
 			}
 		}

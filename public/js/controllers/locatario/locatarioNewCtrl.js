@@ -1,12 +1,10 @@
-angular.module("app").controller("locatarioNewCtrl", function ($scope,locatarioAPI,$location) {	
+angular.module("app").controller("locatarioNewCtrl", function ($scope,pessoaAPI,$location) {	
     
         $scope.adicionarLocatario = function (locatario) {		
-            locatario.user_tipo=1;
-            //console.log(locatario);
-            locatarioAPI.saveLocatario(locatario).success(function (data) {
-                console.log(data.data.id);
+            locatario.user_tipo=1;            
+            pessoaAPI.savePessoa(locatario).success(function (data) {                
                 //delete $scope.locatario;
-                $scope.locatarioForm.$setPristine();
+               // $scope.locatarioForm.$setPristine();
                // $location.path("/locatario");
                 $location.path("/enderecoNew/"+data.data.id);
             });

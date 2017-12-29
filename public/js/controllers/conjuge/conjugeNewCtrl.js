@@ -1,14 +1,14 @@
-angular.module("app").controller("conjugeNewCtrl", function ($scope,conjugeAPI,$location,locatarioId) {	
+angular.module("app").controller("conjugeNewCtrl", function ($scope,conjugeAPI,$location,pessoaId) {	
    
-        $scope.locatarioId=locatarioId;
+        $scope.pessoaId=pessoaId;
         
         $scope.adicionarConjuge = function (conjuge) {
-            conjuge.user=locatarioId;		
+            conjuge.user=pessoaId;		
             conjugeAPI.saveConjuge(conjuge).success(function (data) {
                 //delete $scope.conjuge;
                 //$scope.conjugeForm.$setPristine();
                 //$location.path("/conjuge/"+locatarioId);
-                $location.path("/ocupacaoNew/"+locatarioId);
+                $location.path("/ocupacaoNew/"+pessoaId);
             });
         };	
         

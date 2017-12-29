@@ -1,20 +1,9 @@
-angular.module("app").controller("contratoCtrl", function ($scope, contratos,$location,contratoAPI,locatarioId) {	
+angular.module("app").controller("contratoCtrl", function ($scope, contratos,$location,contratoAPI,pessoaId) {	
 	$scope.contratos = contratos.data;		
-	$scope.locatarioId=locatarioId;
+	$scope.pessoaId=pessoaId;
 	
 	$scope.apagarContrato = function (id) {
 		contratoAPI.deleteContrato(id);				
-	};
-
-	$scope.isContratosSelecionado = function (contratos) {
-		return contratos.some(function (contrato) {
-			return contrato.data.selecionado;
-		});
-	};
-	
-	$scope.ordenarPor = function (campo) {
-		$scope.criterioDeOrdenacao = campo;
-		$scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
 	};	
 	
 });

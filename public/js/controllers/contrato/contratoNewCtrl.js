@@ -1,13 +1,13 @@
-angular.module("app").controller("contratoNewCtrl", function ($scope,contratoAPI,$location,locatarioId) {	
+angular.module("app").controller("contratoNewCtrl", function ($scope,contratoAPI,$location,pessoaId) {	
     
-         $scope.locatarioId=locatarioId;	
+         $scope.pessoaId=pessoaId;	
     
         $scope.adicionarContrato = function (contrato) {
-            contrato.user=locatarioId;			
+            contrato.user=pessoaId;			
             contratoAPI.saveContrato(contrato).success(function (data) {
                 delete $scope.contrato;
                 $scope.contratoForm.$setPristine();
-                $location.path("/contrato/"+locatarioId);
+                $location.path("/contrato/"+pessoaId);
             });
         };	
         

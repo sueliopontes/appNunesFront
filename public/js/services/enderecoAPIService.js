@@ -8,8 +8,8 @@ angular.module("app").factory("enderecoAPI", function ($http,val) {
 		return $http.post(val.baseUrl + "/endereco", endereco);
 	};
 
-	var _updateEndereco = function (id,endereco) {		
-		return $http.put(val.baseUrl + "/endereco/" + id, endereco);
+	var _updateEndereco = function (endereco) {		
+		return $http.put(val.baseUrl + "/endereco/" + endereco.id, endereco);
 	};
 	
 	var _deleteEndereco = function (id) {		

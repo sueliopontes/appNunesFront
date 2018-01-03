@@ -8,9 +8,9 @@ angular.module("app").factory("contatoAPI", function ($http,val) {
 		
 		return $http.post(val.baseUrl + "/contato", contato);
 	};
-	var _updateContato = function (id,contato) {
+	var _updateContato = function (contato) {
 		
-		return $http.put(val.baseUrl + "/contato/" + id, contato);
+		return $http.put(val.baseUrl + "/contato/" + contato.id, contato);
 	};
 	var _deleteContato = function (id) {		
 		return $http.delete(val.baseUrl + "/contato/" + id);

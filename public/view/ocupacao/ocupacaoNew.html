@@ -44,6 +44,10 @@
 			/>
 		</div>
 	</form>
-	<hr/>
+	<hr>
+	<div ng-show="msg!='vazio'">
+		<div  class="alert alert-success" role="alert">{{msg}}	</div>
+	</div>
 	<button class="btn btn-danger btn-block" ng-click="adicionarOcupacao(ocupacao)" ng-disabled="ocupacaoForm.$invalid">Adicionar</button>
+	<a class="btn btn-success btn-block" href="#/locatarioEdit/{{pessoaId}}">Voltar</a>
 </div>

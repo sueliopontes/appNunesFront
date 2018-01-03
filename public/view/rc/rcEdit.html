@@ -1,24 +1,26 @@
-<div ng-show="!rc.length > 0" class="alert alert-danger" role="alert">
-	Nenhum registro de referência comercial encontrado!
-	<hr/>
-	<a class="btn btn-primary btn-block" href="#/rcNew/{{pessoaId}}">Adicionar</a>
-</div>
-<div ng-show="rc.data.length > 0" class="alert alert-danger" role="alert">
-	<div>
-		<div class="alert alert-danger" role="alert">Cadastro de referência comercial</div>	
-	</div>
+<div>
+	<div class="alert alert-danger" role="alert">
+		Cadastro de referência comercial
+	</div>	
 	<form name="rcForm">
-			<label class="align-text-bottom">Nome da Empresa</label>
-		<input class="form-control" type="text" ng-model="rc.data.empresa" name="empresa" ng-required="true" value=rc.data.empresa
-		 placeholder="Empresa" />
-		 <label class="align-text-bottom">Nome da pessoa de contato</label>
-		<input class="form-control" type="text" ng-model="rc.data.contato" name="contato" ng-required="true" value=rc.data.contato
-		 placeholder="Nome do contato" />
-		 <label class="align-text-bottom">Telefone</label>
-		<input class="form-control" type="text" ng-model="rc.data.telefone" name="telefone" ng-required="true" value=rc.data.telefone
-		 placeholder="Telefone" />
-
+		<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Empresa</label>
+			<input class="form-control" type="text" ng-model="rc.data[0].empresa" name="empresa" ng-required="true" placeholder="Empresa"/>
+		</div>
+		<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Contato</label>
+			<input class="form-control" type="text" ng-model="rc.data[0].contato" name="contato" ng-required="true" placeholder="Nome do contato"/>
+		</div>
+		<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Telefone</label>
+			<input class="form-control" type="text" ng-model="rc.data[0].telefone" name="telefone" ng-required="true" placeholder="telefone" />
+		</div>
 	</form>
-	<hr/>
-	<button class="btn btn-danger btn-block" ng-click="saveRC(rc.data.id,rc.data)" ng-disabled="rc.dataForm.$invalid">Salvar</button>
+	<hr>
+	<div ng-show="msg!='vazio'">
+		<div  class="alert alert-success" role="alert">{{msg}}	</div>
+	</div>
+	<button class="btn btn-danger btn-block" ng-click="saveRC(rc.data[0])" ng-disabled="rc.dataForm.$invalid">Salvar</button>
+	<a class="btn btn-success btn-block" href="#/rc/{{pessoaId}}">Voltar</a>
 </div>
+

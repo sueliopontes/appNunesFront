@@ -8,9 +8,9 @@ angular.module("app").factory("bancoAPI", function ($http,val) {
 		return $http.post(val.baseUrl + "/banco", banco);
 	};
 
-	var _updateBanco = function (id,banco) {
-		console.log(banco);
-		return $http.put(val.baseUrl + "/banco/" + id, banco);
+	var _updateBanco = function (banco) {
+		
+		return $http.put(val.baseUrl + "/banco/" + banco.id, banco);
 	};
 	var _deleteBanco = function (id) {		
 		return $http.delete(val.baseUrl + "/banco/" + id);

@@ -1,5 +1,4 @@
-angular.module("app").factory("ocupacaoAPI", function ($http,val) {
-	
+angular.module("app").factory("ocupacaoAPI", function ($http,val) {	
 
 	var _getOcupacao = function (id) {
 		return $http.get(val.baseUrl + "/ocupacao/" + id);
@@ -9,10 +8,11 @@ angular.module("app").factory("ocupacaoAPI", function ($http,val) {
 		
 		return $http.post(val.baseUrl + "/ocupacao", ocupacao);
 	};
-	var _updateOcupacao = function (id,ocupacao) {
-		console.log(ocupacao);
-		return $http.put(val.baseUrl + "/ocupacao/" + id, ocupacao);
+
+	var _updateOcupacao = function (ocupacao) {		
+		return $http.put(val.baseUrl + "/ocupacao/" + ocupacao.id, ocupacao);
 	};
+	
 	var _deleteOcupacao = function (id) {		
 		return $http.delete(val.baseUrl + "/ocupacao/" + id);
 	};

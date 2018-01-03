@@ -25,7 +25,7 @@ angular.module("app").config(function ($routeProvider) {
 		}			
 	});
 
-	$routeProvider.when("/conjugeEdit/:id", {
+	$routeProvider.when("/conjugeEdit/:id/:pessoaId", {
 		templateUrl: "view/conjuge/conjugeEdit.html",
 		controller: "conjugeEditCtrl",
 		resolve: {
@@ -33,7 +33,7 @@ angular.module("app").config(function ($routeProvider) {
 				return conjugeAPI.getConjuge($route.current.params.id);
 			},
 			pessoaId: function ($route) {				
-				return $route.current.params.id;
+				return $route.current.params.pessoaId;
 			}
 		}
 	});	

@@ -12,9 +12,9 @@ angular.module("app").factory("conjugeAPI", function ($http,val) {
 		
 		return $http.post(val.baseUrl + "/conjuge", conjuge);
 	};
-	var _updateConjuge = function (id,conjuge) {
+	var _updateConjuge = function (conjuge) {
 		
-		return $http.put(val.baseUrl + "/conjuge/" + id, conjuge);
+		return $http.put(val.baseUrl + "/conjuge/" + conjuge.id, conjuge);
 	};
 	var _deleteConjuge = function (id) {		
 		return $http.delete(val.baseUrl + "/conjuge/" + id);

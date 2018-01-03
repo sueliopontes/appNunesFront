@@ -3,17 +3,24 @@
 		Referência comercial - Novo cadastro de referência comercial
 	</div>
 	<form name="rcForm">
+		<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
 			<label class="align-text-bottom">Nome da Empresa</label>
-		<input class="form-control" type="text" ng-model="rc.empresa" name="empresa" ng-required="true" value=rc.data.empresa placeholder="Empresa"
-		/>
-		<label class="align-text-bottom">Nome da Pessoa de Contato</label>
-		<input class="form-control" type="text" ng-model="rc.contato" name="contato" ng-required="true" value=rc.data.contato placeholder="Nome do contato"
-		/>
-		<label class="align-text-bottom">Telefone</label>
-		<input class="form-control" type="text" ng-model="rc.telefone" name="telefone" ng-required="true" value=rc.data.telefone
-		 placeholder="Telefone" />
+			<input class="form-control" type="text" ng-model="rc.empresa" name="empresa" ng-required="true" value=rc.data.empresa placeholder="Empresa"	/>
+		</div>
+		<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Nome da Pessoa de Contato</label>
+			<input class="form-control" type="text" ng-model="rc.contato" name="contato" ng-required="true" value=rc.data.contato placeholder="Nome do contato"/>
+		</div>
+		<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Telefone</label>
+			<input class="form-control" type="text" ng-model="rc.telefone" name="telefone" ng-required="true" value=rc.data.telefone placeholder="Telefone" />
+		</div>
 
 	</form>
-	<hr/>
+	<hr>
+	<div ng-show="msg!='vazio'">
+		<div  class="alert alert-success" role="alert">{{msg}}	</div>
+	</div>
 	<button class="btn btn-danger btn-block" ng-click="adicionarRC(rc)" ng-disabled="rcForm.$invalid">Adicionar</button>
+	<a class="btn btn-success btn-block" href="#/rc/{{pessoaId}}">Voltar</a>
 </div>

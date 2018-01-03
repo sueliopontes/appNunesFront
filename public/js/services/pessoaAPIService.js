@@ -19,8 +19,8 @@ angular.module("app").factory("pessoaAPI", function ($http,val) {
 		return $http.post(val.baseUrl + "/pessoa", pessoa);
 	};
 
-	var _updatePessoa = function (id,pessoa) {	
-		return $http.put(val.baseUrl + "/pessoa/" + id, pessoa);
+	var _updatePessoa = function (pessoa) {	
+		return $http.put(val.baseUrl + "/pessoa/" + pessoa.id, pessoa);
 	};
 	
 	var _deletePessoa = function (id) {		

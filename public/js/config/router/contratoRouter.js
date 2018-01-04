@@ -5,9 +5,9 @@ angular.module("app").config(function ($routeProvider) {
 		controller: "contratoCtrl",
 		resolve:{
 			contratos:function(contratoAPI,$route) {
-				return contratoAPI.getcontratoUser($route.current.params.id);
+				return contratoAPI.getcontratosUser($route.current.params.id);
 			},
-			locatarioId: function ($route) {
+			pessoaId: function ($route) {
 				console.log("controler contrato: "+$route.current.params.id);
 				return $route.current.params.id;
 			}

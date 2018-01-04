@@ -1,33 +1,29 @@
 <div>
+
 	<div ng-show="!rps.data.length > 0" class="alert alert-danger" role="alert">
 
-		Nenhum registro de referencia pessoal encontrado!
+		Nenhum registro de referência pessoal encontrado!
 
 	</div>
 	<div ng-show="rps.data.length > 0" class="alert alert-danger" role="alert">
-		Cadastro de referência pessoal
+		Referência pessoal
 	</div>
 
 	<table ng-show="rps.data.length > 0" class="table table-striped">
-		<tr>
-			<th></th>
+		<tr>			
 			<th>
 				<a href="" ng-click="ordenarPor('nome')">Nome</a>
 			</th>
 			<th>
-				<a href="" ng-click="ordenarPor('telefone')">Telefoner</a>
+				<a href="" ng-click="ordenarPor('telefone')">Telefone</a>
 			</th>
 			<th>
 				<a href="" ng-click="ordenarPor('parentesco')">Parentesco</a>
 			</th>
-
-			<th></th>
-			<th></th>
+			<th colspan="2"></th>			
 		</tr>
 		<tr ng-repeat="rp in rps.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
-			<td>
-				<input type="checkbox" ng-model="rp.selecionado" />
-			</td>
+			
 			<td>
 				<a href="">{{rp.nome |name}}</a>
 			</td>
@@ -38,16 +34,18 @@
 				<a href="">{{rp.parentesco}}</a>
 			</td>
 			<td>
-				<a href="#/rpEdit/{{rp.id}}">Editar</a>
+				<a href="#/rpEdit/{{rp.id}}/{{pessoaId}}">Editar</a>
 			</td>
 			<td>
-				<a ng-click="apagarRP(rp.id)" href="">Excluir</a>
+				<a ng-click="apagarRp(rp.id)" href="">Excluir</a>
 			</td>
 		</tr>
 
 	</table>
-	<hr/>
-	<a class="btn btn-danger btn-block" href="#/locatarioEdit/{{locatarioId}}">Locatário</a>
-	<a class="btn btn-primary btn-block" href="#/rpNew/{{locatarioId}}">Adicionar</a>
+	<hr>
+	
+	<a class="btn btn-primary btn-block" href="#/rpNew/{{pessoaId}}">Adicionar</a>
+	<a class="btn btn-success btn-block" href="#/locatarioEdit/{{pessoaId}}">Voltar</a>
+
 
 </div>

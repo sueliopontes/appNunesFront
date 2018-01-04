@@ -1,10 +1,19 @@
-angular.module("app").controller("conjugeEditCtrl", function ($scope, $routeParams, conjuge,conjugeAPI,$location) {
+angular.module("app").controller("conjugeEditCtrl", function ($timeout,$scope, $routeParams,pessoaId, conjuge,conjugeAPI,$location) {
 	$scope.conjuge = conjuge.data;
-	$scope.saveConjuge = function (id,conjuge) {		
-		conjugeAPI.updateConjuge(id,conjuge).success(function (data) {					
-			//$scope.conjugeForm.$setPristine();				
-			$location.path("/conjuge/"+$scope.conjuge.user);	
-			delete $scope.conjuge;		
+	$scope.pessoaId=pessoaId;	
+	$scope.msg="vazio";
+	
+	$scope.saveConjuge = function (conjuge) {		
+		conjugeAPI.updateConjuge(conjuge).success(function (data) {					
+			//$scope.conjugeForm.$setPristine();			
+			//delete $scope.conjuge;		
+			//$location.path("/conjuge/"+pessoaId);	
+
+			$scope.msg="Cadastro salvo com sucesso!!";			
+			var tempo = $timeout(function() {
+				$scope.msg="vazio";
+			}, 2500); // delay 250 ms
+
 		});
 	};
 });

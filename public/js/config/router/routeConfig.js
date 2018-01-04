@@ -1,7 +1,7 @@
 angular.module("app").config(function ($routeProvider) {
 	
 	$routeProvider.when("/", {
-		templateUrl: "view/inicio.html"
+		redirectTo: "/inicio"
 	});
 	
 

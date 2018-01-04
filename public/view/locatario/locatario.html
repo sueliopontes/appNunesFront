@@ -8,43 +8,35 @@
 
 	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?" />
 	<table ng-show="locatarios.data.length > 0" class="table table-striped">
-		<tr>
-			<th></th>
-			<th>
-				<a href="" ng-click="ordenarPor('nome')">Nome</a>
-			</th>
-			<th>
-				<a href="" ng-click="ordenarPor('cpf')">CPF</a>
-			</th>
-			<th>
-				<a href="" ng-click="ordenarPor('rg')">RG</a>
-			</th>
-			<th></th>
-			<th></th>
+		<tr>			
+			<th>Nome</th>
+			<th>CPF</th>
+			<th>RG</th>
+			<th colspan="2"><center>Opções</center></th>
+			
 		</tr>
 		<tr ng-repeat="locatario in locatarios.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+			
 			<td>
-				<input type="checkbox" ng-model="locatario.selecionado" />
+				{{locatario.nome |name}}
 			</td>
 			<td>
-				<a href="">{{locatario.nome |name}}</a>
+				{{locatario.cpf}}
 			</td>
 			<td>
-				<a href="">{{locatario.cpf}}</a>
-			</td>
-			<td>
-				<a href="">{{locatario.rg}}</a>
+				{{locatario.rg}}
 			</td>
 			<td>
 				<a href="#/locatarioEdit/{{locatario.id}}">Visualizar</a>
 			</td>
 			<td>
-				<a ng-click="apagarLocatario(locatario)" href="">Excluir</a>
+				<a ng-click="apagarLocatario(locatario.id)" href="">Excluir</a>
 			</td>
 		</tr>
 
 	</table>
-	<hr/>
+	<hr>
 	<a class="btn btn-primary btn-block" href="#/locatarioNew">Adicionar</a>
+	<a class="btn btn-success btn-block" href="#/inicio">Voltar</a>
 
 </div>

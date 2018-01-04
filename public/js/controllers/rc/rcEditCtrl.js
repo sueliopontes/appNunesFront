@@ -1,10 +1,18 @@
-angular.module("app").controller("rcEditCtrl", function ($scope, $routeParams, rc,rcAPI,$location) {
+angular.module("app").controller("rcEditCtrl", function ($timeout,$scope, $routeParams,pessoaId, rc,rcAPI,$location) {
 	$scope.rc = rc.data;
-	$scope.saveRC = function (id,rc) {		
-		rcAPI.updateRC(id,rc).success(function (data) {
-			delete $scope.rc;
+	$scope.pessoaId=pessoaId;
+	$scope.msg="vazio";
+
+	$scope.saveRC = function (rc) {		
+		rcAPI.updateRC(rc).success(function (data) {
+			//delete $scope.rc;
 			//$scope.contatoForm.$setPristine();			
-			$location.path("/rc/"+rc.user);
+			//$location.path("/pessoaEdit/"+pessoaId);
+			$scope.msg="Cadastro salvo com sucesso!!";			
+			var tempo = $timeout(function() {
+				$scope.msg="vazio";
+			}, 2500); // delay 250 ms
+
 			
 		});
 	};

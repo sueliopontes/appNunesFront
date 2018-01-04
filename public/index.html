@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="app">
+<<<<<<< HEAD
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	<title>Sistema imobiliário</title>
@@ -11,4 +12,134 @@
 			<img id="centro" src="imagens/em_atualizacao.png" alt="Em atualização">
 		</section>	
 	</body>
+=======
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Sistema imobiliário</title>
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/app.css">
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+
+<script src="js/app.js"></script>
+
+
+<script src="js/value/configValue.js"></script>
+<script src="js/filters/nameFilter.js"></script>
+
+<script src="js/config/interceptor/interceptorsConfig.js"></script>
+<script src="js/interceptors/errorInterceptor.js"></script>
+<script src="js/interceptors/timestampInterceptor.js"></script>
+
+
+<script src="js/config/router/routeConfig.js"></script>
+<script src="js/config/router/locatarioRouter.js"></script>
+<script src="js/config/router/enderecoRouter.js"></script>
+<script src="js/config/router/contatoRouter.js"></script>
+<script src="js/config/router/loginRouter.js"></script>
+<script src="js/config/router/rcRouter.js"></script>
+<script src="js/config/router/rpRouter.js"></script>
+<script src="js/config/router/bancoRouter.js"></script>
+<script src="js/config/router/ocupacaoRouter.js"></script>
+<script src="js/config/router/conjugeRouter.js"></script>
+<script src="js/config/router/locadorRouter.js"></script>
+<script src="js/config/router/imoveisRouter.js"></script>
+<script src="js/config/router/contratoRouter.js"></script>
+
+
+<script src="js/config/router/painelRouter.js"></script>
+
+<script src="js/services/pessoaAPIService.js"></script>
+<script src="js/services/bancoAPIService.js"></script>
+<script src="js/services/rcAPIService.js"></script>
+<script src="js/services/rpAPIService.js"></script>
+<script src="js/services/ocupacaoAPIService.js"></script>
+<script src="js/services/contatoAPIService.js"></script>
+<script src="js/services/enderecoAPIService.js"></script>
+
+<script src="js/services/loginAPIService.js"></script>
+<script src="js/services/conjugeAPIService.js"></script>
+
+<script src="js/services/imoveisAPIService.js"></script>
+<script src="js/services/contratoAPIService.js"></script>
+
+
+<script src="js/controllers/locatario/locatarioCtrl.js"></script>
+<script src="js/controllers/locatario/locatarioEditCtrl.js"></script>
+<script src="js/controllers/locatario/locatarioNewCtrl.js"></script>
+
+
+<script src="js/controllers/endereco/enderecoNewCtrl.js"></script>
+<script src="js/controllers/endereco/enderecoEditCtrl.js"></script>
+
+
+<script src="js/controllers/contato/contatoNewCtrl.js"></script>
+<script src="js/controllers/contato/contatoEditCtrl.js"></script>
+
+<script src="js/controllers/conjuge/conjugeCtrl.js"></script>
+<script src="js/controllers/conjuge/conjugeNewCtrl.js"></script>
+<script src="js/controllers/conjuge/conjugeEditCtrl.js"></script>
+
+
+
+<script src="js/controllers/ocupacao/ocupacaoNewCtrl.js"></script>
+<script src="js/controllers/ocupacao/ocupacaoEditCtrl.js"></script>
+
+<script src="js/controllers/rp/rpCtrl.js"></script>
+<script src="js/controllers/rp/rpNewCtrl.js"></script>
+<script src="js/controllers/rp/rpEditCtrl.js"></script>
+
+<script src="js/controllers/rc/rcCtrl.js"></script>
+<script src="js/controllers/rc/rcNewCtrl.js"></script>
+<script src="js/controllers/rc/rcEditCtrl.js"></script>
+
+
+<script src="js/controllers/banco/bancoNewCtrl.js"></script>
+<script src="js/controllers/banco/bancoEditCtrl.js"></script>
+
+<script src="js/controllers/login/loginCtrl.js"></script>
+<script src="js/controllers/login/loginEditCtrl.js"></script>
+<script src="js/controllers/login/loginNewCtrl.js"></script>
+
+<script src="js/controllers/locador/locadorCtrl.js"></script>
+<script src="js/controllers/locador/locadorEditCtrl.js"></script>
+<script src="js/controllers/locador/locadorNewCtrl.js"></script>
+
+<script src="js/controllers/imoveis/imoveisCtrl.js"></script>
+<script src="js/controllers/imoveis/imoveisEditCtrl.js"></script>
+<script src="js/controllers/imoveis/imoveisNewCtrl.js"></script>
+
+<script src="js/controllers/contrato/contratoCtrl.js"></script>
+<script src="js/controllers/contrato/contratoEditCtrl.js"></script>
+<script src="js/controllers/contrato/contratoNewCtrl.js"></script>
+
+<script src="js/controllers/painel/painelCtrl.js"></script>
+
+
+
+<body>
+	<div class="container">
+		<div class="jumbotron" ng-show="loading">
+			<h5>Carregando, por favor aguarde...</h5>
+		</div>
+		<div ng-hide="loading">
+			<section id="header">
+				<div ng-include="'view/header.html'"></div>
+			</section>
+			<section id="menu">
+				<div ng-include="'view/menu.html'"></div>
+			</section>
+			<section id="body">
+				<div ng-view></div>
+			</section>
+			<section id="footer">
+				<!--<div ng-include="'view/footer.html'"></div>-->
+			</section>
+		</div>
+	</div>
+</body>
+
+>>>>>>> developer
 </html>

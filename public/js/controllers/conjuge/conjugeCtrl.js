@@ -1,19 +1,8 @@
-angular.module("app").controller("conjugeCtrl", function ($scope, conjuges,$location,conjugeAPI,locatarioId) {	
+angular.module("app").controller("conjugeCtrl", function ($scope, conjuges,$location,conjugeAPI,pessoaId) {	
 	$scope.conjuges = conjuges.data;		
-	$scope.locatarioId=locatarioId;
+	$scope.pessoaId=pessoaId;
 	$scope.apagarConjuge = function (id) {
 		conjugeAPI.deleteConjuge(id);				
 	};
-
-	$scope.isConjugesSelecionado = function (conjuges) {
-		return conjuges.some(function (conjuge) {
-			return conjuge.data.selecionado;
-		});
-	};
-	
-	$scope.ordenarPor = function (campo) {
-		$scope.criterioDeOrdenacao = campo;
-		$scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
-	};	
 	
 });

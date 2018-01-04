@@ -1,22 +1,22 @@
 angular.module("app").factory("imoveisAPI", function ($http,val) {
 	var _getImoveis = function () {
-		return $http.get(val.baseUrl + "/imoveisFull");
+		return $http.get(val.baseUrl + "/imovel");
 	};
 
 	var _getImovel = function (id) {
-		return $http.get(val.baseUrl + "/imoveis/" + id);
+		return $http.get(val.baseUrl + "/imovel/" + id);
 	};
 
 	var _saveImovel = function (imovel) {
 		
-		return $http.post(val.baseUrl + "/imoveis", imovel);
+		return $http.post(val.baseUrl + "/imovel", imovel);
 	};
 	var _updateImovel = function (id,imovel) {
 		console.log(imovel);
-		return $http.put(val.baseUrl + "/imoveis/" + id, imovel);
+		return $http.put(val.baseUrl + "/imovel/" + id, imovel);
 	};
 	var _deleteImovel = function (id) {		
-		return $http.delete(val.baseUrl + "/imoveis/" + id);
+		return $http.delete(val.baseUrl + "/imovel/" + id);
 	};
 
 	return {

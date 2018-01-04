@@ -3,13 +3,23 @@
 		Cônjuge - Novo cadastro de cônjuge
 	</div>
 	<form name="conjugeForm">
-		<label class="align-text-bottom">Nome do Cônjuge</label>
-		<input class="form-control" type="text" ng-model="conjuge.nome" name="nome" ng-required="true" placeholder="Nome do cônjuge"/>
-		<label class="align-text-bottom">CPF</label>
-		<input class="form-control" type="text" ng-model="conjuge.cpf" name="cpf" ng-required="true" placeholder="CPF" />
-		<label class="align-text-bottom">RG</label>
-		<input class="form-control" type="text" ng-model="conjuge.rg" name="rg" ng-required="true" placeholder="RG" />
+		<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Nome do Cônjuge</label>
+			<input class="form-control" type="text" ng-model="conjuge.nome" name="nome" ng-required="true" placeholder="Nome do cônjuge"/>
+		</div>
+		<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">CPF</label>
+			<input class="form-control" type="text" ng-model="conjuge.cpf" name="cpf" ng-required="true" placeholder="CPF" />
+		</div>
+		<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">RG</label>
+			<input class="form-control" type="text" ng-model="conjuge.rg" name="rg" ng-required="true" placeholder="RG" />
+	</div>
 	</form>
-	<hr/>
+	<hr>
+	<div ng-show="msg!='vazio'">
+		<div  class="alert alert-success" role="alert">{{msg}}	</div>
+	</div>
 	<button class="btn btn-danger btn-block" ng-click="adicionarConjuge(conjuge)">Adicionar</button>
+	<a class="btn btn-success btn-block" href="#/conjuge/{{pessoaId}}">Voltar</a>
 </div>

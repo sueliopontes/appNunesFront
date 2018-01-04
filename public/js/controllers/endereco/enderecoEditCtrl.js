@@ -1,12 +1,18 @@
-angular.module("app").controller("enderecoEditCtrl", function ($scope, $routeParams, endereco,enderecoAPI,$location) {
+angular.module("app").controller("enderecoEditCtrl", function ($timeout,$scope, pessoaId, endereco, enderecoAPI,$location) {
 	$scope.endereco = endereco.data;
-	$scope.saveEndereco = function (id,endereco) {		
-		enderecoAPI.updateEndereco(id,endereco).success(function (data) {
-			delete $scope.endereco;
+	$scope.pessoaId=pessoaId;
+	$scope.msg="vazio";
+
+	$scope.saveEndereco = function (endereco) {		
+		enderecoAPI.updateEndereco(endereco).success(function (data) {
+			//delete $scope.endereco;
 			//$scope.contatoForm.$setPristine();			
-			$location.path("/endereco/"+endereco.user);
-			
-			
+			//$location.path("/enderecoEdit/"+pessoaId);			
+			$scope.msg="Cadastro salvo com sucesso!!";			
+			var tempo = $timeout(function() {
+				$scope.msg="vazio";
+			}, 2500); // delay 250 ms
+
 		});
 	};
 });

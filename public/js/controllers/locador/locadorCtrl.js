@@ -1,20 +1,8 @@
-angular.module("app").controller("locadorCtrl", function ($scope, locadors,$location,locadorAPI) {	
-	$scope.locadors = locadors.data;	
-		
+angular.module("app").controller("locadorCtrl", function ($scope, locadores,$location,pessoaAPI) {	
+	$scope.locadores = locadores.data;			
 	
 	$scope.apagarLocador = function (id) {
-		locadorAPI.deleteLocador(id);				
+		pessoaAPI.deletePessoa(id);				
 	};
-
-	$scope.isLocadorsSelecionado = function (locadors) {
-		return locadors.some(function (locador) {
-			return locador.data.selecionado;
-		});
-	};
-	
-	$scope.ordenarPor = function (campo) {
-		$scope.criterioDeOrdenacao = campo;
-		$scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
-	};	
 	
 });

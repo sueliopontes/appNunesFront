@@ -38,7 +38,7 @@
 				<a href="">{{conjuge.rg}}</a>
 			</td>
 			<td>
-				<a href="#/conjugeEdit/{{conjuge.id}}">Editar</a>
+				<a href="#/conjugeEdit/{{conjuge.id}}/{{pessoaId}}">Editar</a>
 			</td>
 			<td>
 				<a ng-click="apagarConjuge(conjuge.id)" href="">Excluir</a>
@@ -46,9 +46,9 @@
 		</tr>
 
 	</table>
-	<hr/>
-	<a class="btn btn-danger btn-block" href="#/locatarioEdit/{{locatarioId}}">Locatário</a>
-	<a class="btn btn-primary btn-block" href="#/conjugeNew/{{locatarioId}}">Adicionar</a>
+	<hr>	
+	<a class="btn btn-primary btn-block" href="#/conjugeNew/{{pessoaId}}">Adicionar</a>
+	<a class="btn btn-success btn-block" href="#/locatarioEdit/{{pessoaId}}">Voltar</a>
 
 
 </div>

@@ -4,13 +4,13 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/locatario/locatario.html",
 		controller: "locatarioCtrl",
 		resolve:{
-			locatarios:function(locatarioAPI) {
-				return locatarioAPI.getLocatarios();
+			locatarios:function(pessoaAPI) {
+				return pessoaAPI.getLocatarios();
 			}
 		}
 	});
+	
 	$routeProvider.when("/locatarioNew", {
-		//templateUrl: "view/manutencao.html"
 		templateUrl: "view/locatario/locatarioNew.html",
 		controller: "locatarioNewCtrl"			
 	});
@@ -19,8 +19,8 @@ angular.module("app").config(function ($routeProvider) {
 		templateUrl: "view/locatario/locatarioEdit.html",
 		controller: "locatarioEditCtrl",
 		resolve: {
-			locatario: function (locatarioAPI, $route) {
-				return locatarioAPI.getLocatario($route.current.params.id);
+			locatario: function (pessoaAPI, $route) {
+				return pessoaAPI.getPessoa($route.current.params.id);
 			}
 		}
 	});	

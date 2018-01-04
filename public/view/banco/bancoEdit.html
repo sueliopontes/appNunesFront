@@ -1,0 +1,42 @@
+<div ng-show="!banco.data.length > 0" class="alert alert-danger" role="alert">
+	Nenhum registro de referência bancária encontrado!
+	<hr>
+	<a class="btn btn-primary btn-block" href="#/bancoNew/{{pessoaId}}">Adicionar</a>
+	<a class="btn btn-success btn-block" href="#/locatarioEdit/{{pessoaId}}">Voltar</a>
+
+</div>
+<div ng-show="banco.data.length > 0">
+	<div class="alert alert-danger" role="alert">Cadastro de referência bancária</div>	
+	<form name="bancoForm">
+		<div class="form-group col-md-2 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Código do Banco</label>
+			<input class="form-control" type="text" ng-model="banco.data[0].banco_numero" name="banco_numero" ng-required="true" placeholder="Código do banco" />
+		</div>
+
+		<div class="form-group col-md-4 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Nome do Banco</label>
+			<input class="form-control" type="text" ng-model="banco.data[0].banco_nome" name="banco_nome" ng-required="true" placeholder="Nome do banco" />
+		</div>
+
+		<div class="form-group col-md-2 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Número da Agência</label>
+			<input class="form-control" type="text" ng-model="banco.data[0].banco_agencia" name="banco_agencia" ng-required="true" placeholder="Agência" />
+		</div>
+		
+		<div class="form-group col-md-2 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Número da Conta</label>
+			<input class="form-control" type="text" ng-model="banco.data[0].banco_conta" name="banco_conta" ng-required="true" placeholder="Conta" />
+		</div>
+
+		<div class="form-group col-md-2 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Data da Abertura</label>
+			<input class="form-control" type="text" ng-model="banco.data[0].banco_data_abertura" name="banco_data_abertura" ng-required="true" placeholder="Data de abertura da conta" />
+		</div>
+	</form>
+	<hr>
+	<div ng-show="msg!='vazio'">
+		<div  class="alert alert-success" role="alert">{{msg}}	</div>
+	</div>
+	<button class="btn btn-danger btn-block" ng-click="saveBanco(banco.data[0])" ng-disabled="banco.dataForm.$invalid">Salvar</button>
+	<a class="btn btn-success btn-block" href="#/locatarioEdit/{{pessoaId}}">Voltar</a>
+</div>

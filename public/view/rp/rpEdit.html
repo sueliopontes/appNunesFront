@@ -1,0 +1,26 @@
+<div>
+	<div class="alert alert-danger" role="alert">
+		Cadastro de referência pessoal
+	</div>	
+	<form name="rpForm">
+		<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Nome da Pessoa</label>
+			<input class="form-control" type="text" ng-model="rp.data[0].nome" name="nome" ng-required="true" placeholder="Nome"/>
+		</div>
+		<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Telefone</label>
+			<input class="form-control" type="text" ng-model="rp.data[0].telefone" name="telefone" ng-required="true" placeholder="Telefone"/>
+		</div>
+		<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Grau de Parentesco</label>
+			<input class="form-control" type="text" ng-model="rp.data[0].parentesco" name="parentesco" ng-required="true" placeholder="Parentesco" />
+		</div>
+	</form>	
+	<hr>
+	<div ng-show="msg!='vazio'">
+		<div  class="alert alert-success" role="alert">{{msg}}	</div>
+	</div>
+	<button class="btn btn-danger btn-block" ng-click="saveRP(rp.data[0])" ng-disabled="rp.dataForm.$invalid">Salvar</button>
+	<a class="btn btn-success btn-block" href="#/rp/{{pessoaId}}">Voltar</a>
+</div>
+

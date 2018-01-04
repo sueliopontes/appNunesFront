@@ -1,0 +1,51 @@
+<div>
+
+	<div ng-show="!rcs.data.length > 0" class="alert alert-danger" role="alert">
+
+		Nenhum registro de referência comercial encontrado!
+
+	</div>
+	<div ng-show="rcs.data.length > 0" class="alert alert-danger" role="alert">
+		Referência comercial
+	</div>
+
+	<table ng-show="rcs.data.length > 0" class="table table-striped">
+		<tr>			
+			<th>
+				<a href="" ng-click="ordenarPor('nome')">Empresa</a>
+			</th>
+			<th>
+				<a href="" ng-click="ordenarPor('telefone')">Nome do Contato</a>
+			</th>
+			<th>
+				<a href="" ng-click="ordenarPor('parentesco')">Telefone</a>
+			</th>
+			<th colspan="2"></th>			
+		</tr>
+		<tr ng-repeat="rc in rcs.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+			
+			<td>
+				<a href="">{{rc.empresa |name}}</a>
+			</td>
+			<td>
+				<a href="">{{rc.contato}}</a>
+			</td>
+			<td>
+				<a href="">{{rc.telefone}}</a>
+			</td>
+			<td>
+				<a href="#/rcEdit/{{rc.id}}/{{pessoaId}}">Editar</a>
+			</td>
+			<td>
+				<a ng-click="apagarRC(rc.id)" href="">Excluir</a>
+			</td>
+		</tr>
+
+	</table>
+	<hr>
+	
+	<a class="btn btn-primary btn-block" href="#/rcNew/{{pessoaId}}">Adicionar</a>
+	<a class="btn btn-success btn-block" href="#/locatarioEdit/{{pessoaId}}">Voltar</a>
+
+
+</div>

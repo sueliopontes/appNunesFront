@@ -1,0 +1,38 @@
+<div>	
+	<div ng-show="locadores.data.length > 0" class="alert alert-danger" role="alert">
+		Locador
+	</div>
+
+	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?" />
+	<table ng-show="locadores.data.length > 0" class="table table-striped">
+		<tr>			
+			<th>Nome</th>
+			<th>CPF</th>
+			<th>RG</th>
+			<th colspan="2"><center>Opções</center></th>
+			
+		</tr>
+		<tr ng-repeat="locador in locadores.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+			
+			<td>
+				<a href="">{{locador.nome |name}}</a>
+			</td>
+			<td>
+				<a href="">{{locador.cpf}}</a>
+			</td>
+			<td>
+				<a href="">{{locador.rg}}</a>
+			</td>
+			<td>
+				<a href="#/locadorEdit/{{locador.id}}">Visualizar</a>
+			</td>
+			<td>
+				<a ng-click="apagarLocador(locador.id)" href="">Excluir</a>
+			</td>
+		</tr>
+
+	</table>
+	<hr/>
+	<a class="btn btn-primary btn-block" href="#/locadorNew">Adicionar</a>
+
+</div>

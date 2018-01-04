@@ -1,0 +1,26 @@
+<div>
+	<div class="alert alert-danger" role="alert">
+		Cadastro de referência comercial
+	</div>	
+	<form name="rcForm">
+		<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Empresa</label>
+			<input class="form-control" type="text" ng-model="rc.data[0].empresa" name="empresa" ng-required="true" placeholder="Empresa"/>
+		</div>
+		<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Contato</label>
+			<input class="form-control" type="text" ng-model="rc.data[0].contato" name="contato" ng-required="true" placeholder="Nome do contato"/>
+		</div>
+		<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Telefone</label>
+			<input class="form-control" type="text" ng-model="rc.data[0].telefone" name="telefone" ng-required="true" placeholder="telefone" />
+		</div>
+	</form>
+	<hr>
+	<div ng-show="msg!='vazio'">
+		<div  class="alert alert-success" role="alert">{{msg}}	</div>
+	</div>
+	<button class="btn btn-danger btn-block" ng-click="saveRC(rc.data[0])" ng-disabled="rc.dataForm.$invalid">Salvar</button>
+	<a class="btn btn-success btn-block" href="#/rc/{{pessoaId}}">Voltar</a>
+</div>
+

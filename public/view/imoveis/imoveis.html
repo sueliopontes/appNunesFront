@@ -1,0 +1,55 @@
+<div>
+	<div ng-show="!imoveis.data.length > 0" class="alert alert-danger" role="alert">
+
+		Nenhum registro de imóvel encontrado!
+
+	</div>
+	<div ng-show="imoveis.data.length > 0" class="alert alert-danger" role="alert">
+		Imóveis
+	</div>
+	<table ng-show="imoveis.data.length > 0" class="table table-striped">
+		<tr>			
+			<th>
+				<a href="" ng-click="ordenarPor('imovel_id')">Código</a>
+			</th>
+			<th>
+				<a href="" ng-click="ordenarPor('imovel_locador_id')">Locador</a>
+			</th>
+			<th>
+				<a href="" ng-click="ordenarPor('imovel_id')">Bairro</a>
+			</th>
+			<th>
+				<a href="" ng-click="ordenarPor('imovel_locador_id')">Endereço</a>
+			</th>
+			
+			<th></th>
+			<th></th>
+		</tr>
+		<tr ng-repeat="imovel in imoveis.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+			
+			<td>
+				<a href="">{{imovel.id}}</a>
+			</td>
+			<td>
+				<a href="">{{imovel.nome}}</a>
+			</td>
+			<td>
+				<a href="">{{imovel.bairro}}</a>
+			</td>
+			<td>
+				<a href="">{{imovel.logradouro}}</a>
+			</td>
+			
+			<td>
+				<a href="#/imoveisEdit/{{imovel.id}}">Visualizar</a>
+			</td>
+			<td>
+				<a ng-click="apagarImovel(imovel.id)" href="">Excluir</a>
+			</td>
+		</tr>
+
+	</table>
+	<hr/>
+	<a class="btn btn-primary btn-block" href="#/imoveisNew/{{locatarioId}}">Adicionar</a>
+
+</div>

@@ -25,12 +25,12 @@ angular.module("app").config(function ($routeProvider) {
 		}			
 	});
 
-	$routeProvider.when("/conjugeEdit/:id/:pessoaId", {
+	$routeProvider.when("/conjugeEdit/:pessoaId", {
 		templateUrl: "view/conjuge/conjugeEdit.html",
 		controller: "conjugeEditCtrl",
 		resolve: {
 			conjuge: function (conjugeAPI, $route) {
-				return conjugeAPI.getConjuge($route.current.params.id);
+				return conjugeAPI.getConjuge($route.current.params.pessoaId);
 			},
 			pessoaId: function ($route) {				
 				return $route.current.params.pessoaId;

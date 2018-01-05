@@ -1,8 +1,12 @@
-<div>
-	<div class="alert alert-danger" role="alert">
-		Cadastro de cônjuge
-	</div>
-	{{pessoaId}}
+<div ng-show="!conjuge.data.length > 0" class="alert alert-danger" role="alert">
+	Nenhum registro de cônjuge encontrado!
+	<hr>
+	<a class="btn btn-primary btn-block" href="#/conjugeNew/{{pessoaId}}">Adicionar</a>
+	<a class="btn btn-success btn-block" href="#/locatarioEdit/{{pessoaId}}">Voltar</a>
+
+</div>
+<div ng-show="conjuge.data.length > 0">
+	<div class="alert alert-danger" role="alert">Cadastro de cônjuge</div>	
 	<form name="conjugeForm">
 		<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
 			<label class="align-text-bottom">Nome do Cônjuge</label>
@@ -22,5 +26,5 @@
 		<div  class="alert alert-success" role="alert">{{msg}}	</div>
 	</div>
 	<button class="btn btn-danger btn-block" ng-click="saveConjuge(conjuge.data[0])" ng-disabled="conjuge.dataForm.$invalid">Salvar</button>
-	<a class="btn btn-success btn-block" href="#/conjuge/{{pessoaId}}">Voltar</a>
+	<a class="btn btn-success btn-block" href="#/locatarioEdit/{{pessoaId}}">Voltar</a>
 </div>

@@ -15,6 +15,11 @@ angular.module("app").config(function ($routeProvider) {
 		controller: "locatarioNewCtrl"			
 	});
 
+	$routeProvider.when("/locatarioNew2", {
+		templateUrl: "view/locatario/locatarioNew2.html",
+		controller: "locatarioNewCtrl2"			
+	});
+
 	$routeProvider.when("/locatarioEdit/:id", {
 		templateUrl: "view/locatario/locatarioEdit.html",
 		controller: "locatarioEditCtrl",

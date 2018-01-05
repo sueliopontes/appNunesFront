@@ -1,0 +1,265 @@
+<div class="alert alert-danger" role="alert">
+	Locatário - Novo cadastro de locatário
+</div>
+<form name="locatarioForm">
+	<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Nome do locatário</label>
+		<input class="form-control" type="text" ng-model="locatario.nome" name="nome" ng-required="true" placeholder="Nome do locatario"/>
+	</div>
+
+	<div class="form-group col-md-3 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Data de Nascimento</label>
+		<input class="form-control" type="text" ng-model="locatario.nascimento" name="nascimento" ng-required="true" placeholder="Data de nascimento"/>
+	</div>
+
+	<div class="form-group col-md-3 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Sexo</label>
+		<input class="form-control" type="text" ng-model="locatario.sexo" name="sexo" ng-required="true" placeholder="Sexo" />
+	</div>
+
+	<div class="form-group col-md-3 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Estado</label>
+		<input class="form-control" type="text" ng-model="locatario.estado" name="estado" ng-required="true" placeholder="Estado civil"/>
+	</div>
+
+	<div class="form-group col-md-3 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">CPF</label>
+		<input class="form-control" type="text" ng-model="locatario.cpf" name="cpf" ng-required="true" placeholder="CFP" />
+	</div>
+
+	<div class="form-group col-md-3 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">RG</label>
+		<input class="form-control" type="text" ng-model="locatario.rg" name="rg" ng-required="true" placeholder="RG" />
+	</div>
+
+	<div class="form-group col-md-2 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Orgão Emissor</label>
+		<input class="form-control" type="text" ng-model="locatario.emissor" name="emissor" ng-required="true" placeholder="Emissor"/>
+	</div>
+
+	<div class="form-group col-md-1 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">UF</label>
+		<input class="form-control" type="text" ng-model="locatario.uf" name="uf" ng-required="true" placeholder="UF" />
+	</div>
+
+	<div class="form-group col-md-2 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Naturalidade</label>
+		<input class="form-control" type="text" ng-model="locatario.naturalidade" name="naturalidade" ng-required="true" placeholder="Naturalidade"/>
+	</div>
+
+	<div class="form-group col-md-5 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Nome do Pai</label>
+		<input class="form-control" type="text" ng-model="locatario.pai" name="pai" ng-required="true" placeholder="Nome do pai"/>
+	</div>
+	<div class="form-group col-md-5 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Nome da Mãe</label>
+		<input class="form-control" type="text" ng-model="locatario.mae" name="mae" ng-required="true" placeholder="Nome do mae"/>
+	</div>
+</form>
+
+<div class="form-group col-md-12 col-sm-12 col-xs-12"><hr/></div>
+<div class="form-group col-md-12 col-sm-12 col-xs-12 alert alert-danger" role="alert">Endereço</div>
+
+<form name="enderecoForm">
+	<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Logradouro</label>
+		<input class="form-control" type="text" ng-model="endereco.logradouro" name="logradouro" ng-required="true" placeholder="Logradouro"/>
+	</div>
+	<div class="form-group col-md-2 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Número</label>
+		<input class="form-control" type="text" ng-model="endereco.numero" name="numero" ng-required="true" placeholder="Número"/>
+	</div>
+	<div class="form-group col-md-4 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Bairro</label>
+		<input class="form-control" type="text" ng-model="endereco.bairro" name="bairro" ng-required="true" placeholder="Bairro"/>
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Cidade</label>
+		<input class="form-control" type="text" ng-model="endereco.cidade" name="cidade" ng-required="true" placeholder="Cidade"/>
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">CEP</label>
+		<input class="form-control" type="text" ng-model="endereco.cep" name="cep" ng-required="true" placeholder="CEP" />
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">UF</label>
+		<input class="form-control" type="text" ng-model="endereco.uf" name="uf" ng-required="true" placeholder="UF" />
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Complemento</label>
+		<input class="form-control" type="text" ng-model="endereco.complemento" name="complemento" ng-required="true" placeholder="Complemento"	/>
+	</div>
+</form>
+
+<div class="form-group col-md-12 col-sm-12 col-xs-12"><hr/></div>
+<div class="form-group col-md-12 col-sm-12 col-xs-12 alert alert-danger" role="alert">Referências bancária</div>
+
+<form name="bancoForm">
+	<div class="form-group col-md-2 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Código do Banco</label>
+		<input class="form-control" type="text" ng-model="banco.banco_numero" name="banco_numero" ng-required="true" placeholder="Código do banco"
+		/>
+	</div>
+
+	<div class="form-group col-md-4 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Nome do Banco</label>
+		<input class="form-control" type="text" ng-model="banco.banco_nome" name="banco_nome" ng-required="true" placeholder="Nome do banco"
+		/>
+	</div>
+
+	<div class="form-group col-md-2 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Número da Agência</label>
+		<input class="form-control" type="text" ng-model="banco.banco_agencia" name="banco_agencia" ng-required="true" placeholder="Agência"
+		/>
+	</div>
+
+	<div class="form-group col-md-2 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Número da Conta</label>
+		<input class="form-control" type="text" ng-model="banco.banco_conta" name="banco_conta" ng-required="true" placeholder="Conta"
+		/>
+	</div>
+
+	<div class="form-group col-md-2 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Data de Abertura</label>
+		<input class="form-control" type="text" ng-model="banco.banco_data_abertura" name="banco_data_abertura" ng-required="true"
+		 placeholder="Data de abertura" />
+	</div>
+</form>
+
+<div class="form-group col-md-12 col-sm-12 col-xs-12"><hr/></div>
+<div class="form-group col-md-12 col-sm-12 col-xs-12 alert alert-danger" role="alert">Conjugê</div>
+
+
+<form name="conjugeForm">
+	<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Nome do Cônjuge</label>
+		<input class="form-control" type="text" ng-model="conjuge.nome" name="nome" ng-required="true" placeholder="Nome do cônjuge"
+		/>
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">CPF</label>
+		<input class="form-control" type="text" ng-model="conjuge.cpf" name="cpf" ng-required="true" placeholder="CPF" />
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">RG</label>
+		<input class="form-control" type="text" ng-model="conjuge.rg" name="rg" ng-required="true" placeholder="RG" />
+	</div>
+</form>
+
+<div class="form-group col-md-12 col-sm-12 col-xs-12"><hr/></div>
+<div class="form-group col-md-12 col-sm-12 col-xs-12 alert alert-danger" role="alert">Contato</div>
+
+
+<form name="contatoForm">
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Telefone Fixo</label>
+		<input class="form-control" type="text" ng-model="contato.fixo" name="fixo" ng-required="true" placeholder="Telefone fixo"
+		/>
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Celular</label>
+		<input class="form-control" type="text" ng-model="contato.celular" name="celular" ng-required="true" placeholder="Celular"
+		/>
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">E-mail</label>
+		<input class="form-control" type="text" ng-model="contato.email" name="email" ng-required="true" placeholder="Email" />
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Recado</label>
+		<input class="form-control" type="text" ng-model="contato.recado" name="recado" ng-required="true" placeholder="Recado" />
+	</div>
+</form>
+
+<div class="form-group col-md-12 col-sm-12 col-xs-12"><hr/></div>
+<div class="form-group col-md-12 col-sm-12 col-xs-12 alert alert-danger" role="alert">Ocupação profissional</div>
+
+
+<form name="ocupacaoForm">
+	<div class="form-group col-md-6 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Nome da Empresa</label>
+		<input class="form-control" type="text" ng-model="ocupacao.empresa" name="empresa" ng-required="true" placeholder="Nome da empresa"
+		/>
+	</div>
+	<div class="form-group col-md-4 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">CNPJ</label>
+		<input class="form-control" type="text" ng-model="ocupacao.cnpj" name="cnpj" ng-required="true" placeholder="CNPJ" />
+	</div>
+	<div class="form-group col-md-2 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Data de Admissão</label>
+		<input class="form-control" type="text" ng-model="ocupacao.admissao" name="admissao" ng-required="true" placeholder="Data de admissão"
+		/>
+	</div>
+	<div class="form-group col-md-4 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Telefone</label>
+		<input class="form-control" type="text" ng-model="ocupacao.contato" name="contato" ng-required="true" placeholder="Contato"
+		/>
+	</div>
+	<div class="form-group col-md-6 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Endereço</label>
+		<input class="form-control" type="text" ng-model="ocupacao.endereco" name="endereco" ng-required="true" placeholder="Endereço"
+		/>
+	</div>
+
+	<div class="form-group col-md-2 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Salário</label>
+		<input class="form-control" type="text" ng-model="ocupacao.salario" name="salario" ng-required="true" placeholder="Salário"
+		/>
+	</div>
+	<div class="form-group col-md-6 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Cargo / Ocupação</label>
+		<input class="form-control" type="text" ng-model="ocupacao.ocupacao" name="ocupacao" ng-required="true" placeholder="Ocupação"
+		/>
+	</div>
+	<div class="form-group col-md-6 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Outras Rendas</label>
+		<input class="form-control" type="text" ng-model="ocupacao.rendas" name="rendas" ng-required="true" placeholder="Rendas"
+		/>
+	</div>
+</form>
+
+<div class="form-group col-md-12 col-sm-12 col-xs-12"><hr/></div>
+<div class="form-group col-md-12 col-sm-12 col-xs-12 alert alert-danger" role="alert">Referência pessoal</div>
+
+
+<form name="rpForm">
+	<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Nome da Pessoa de Contato</label>
+		<input class="form-control" type="text" ng-model="rp.nome" name="nome" ng-required="true" placeholder="Nome"/>
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Telefone</label>
+		<input class="form-control" type="text" ng-model="rp.telefone" name="telefone" ng-required="true" placeholder="Telefone" />
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Grau de Parentesco</label>
+		<input class="form-control" type="text" ng-model="rp.parentesco" name="parentesco" ng-required="true" placeholder="Parentesco" />
+	</div>
+</form>
+
+<div class="form-group col-md-12 col-sm-12 col-xs-12"><hr/></div>
+<div class="form-group col-md-12 col-sm-12 col-xs-12 alert alert-danger" role="alert">Referência comercial</div>
+
+<form name="rcForm">
+	<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Nome da Empresa</label>
+		<input class="form-control" type="text" ng-model="rc.empresa" name="empresa" ng-required="true" placeholder="Empresa"	/>
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Nome da Pessoa de Contato</label>
+		<input class="form-control" type="text" ng-model="rc.contato" name="contato" ng-required="true" placeholder="Nome do contato"/>
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Telefone</label>
+		<input class="form-control" type="text" ng-model="rc.telefone" name="telefone" ng-required="true" placeholder="Telefone" />
+	</div>
+
+</form>
+<div class="form-group col-md-12 col-sm-12 col-xs-12">
+	<hr/>
+</div>
+
+<div class="form-group col-md-12 col-sm-12 col-xs-12">
+	<button class="btn btn-danger btn-block" ng-click="adicionarLocatario(locatario, endereco, contato, banco, conjuge, ocupacao, rc, rp)" ng-disabled="locatarioForm.$invalid">Salvar</button>
+	<a class="btn btn-success btn-block" href="#/inicio">Voltar</a>
+</div>

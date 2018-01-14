@@ -2,7 +2,7 @@
 	Nenhum registro de contato encontrado!
 	<hr>
 	<a class="btn btn-primary btn-block" href="#/contatoNew/{{pessoaId}}">Adicionar</a>
-	<a class="btn btn-success btn-block" href="#/locatarioEdit/{{pessoaId}}">Voltar</a>
+	<button class="btn btn-success btn-block" ng-click="voltar()">Voltar</button>
 
 </div>
 <div ng-show="contato.data.length > 0">
@@ -30,6 +30,5 @@
 		<div  class="alert alert-success" role="alert">{{msg}}	</div>
 	</div>
 	<button class="btn btn-danger btn-block" ng-click="saveContato(contato.data[0])" ng-disabled="contato.dataForm.$invalid">Salvar</button>
-	<a class="btn btn-success btn-block" href="#/locatarioEdit/{{pessoaId}}">Voltar</a>
-	
+	<button class="btn btn-success btn-block" ng-click="voltar()">Voltar</button>
 </div>

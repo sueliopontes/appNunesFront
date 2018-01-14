@@ -1,0 +1,125 @@
+<div class="alert alert-danger" role="alert">
+	Locador - Novo cadastro de locador
+</div>
+<form name="locadorForm">
+	<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Nome do locador</label>
+		<input class="form-control" type="text" ng-model="locador.nome" name="nome" ng-required="true" placeholder="Nome do locador"/>
+	</div>
+
+	<div class="form-group col-md-3 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Data de Nascimento</label>
+		<input class="form-control" type="text" ng-model="locador.nascimento" name="nascimento" ng-required="true" placeholder="Data de nascimento"/>
+	</div>
+
+	<div class="form-group col-md-3 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Sexo</label>
+		<input class="form-control" type="text" ng-model="locador.sexo" name="sexo" ng-required="true" placeholder="Sexo" />
+	</div>
+
+	<div class="form-group col-md-3 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Estado</label>
+		<input class="form-control" type="text" ng-model="locador.estado" name="estado" ng-required="true" placeholder="Estado civil"/>
+	</div>
+
+	<div class="form-group col-md-3 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">CPF</label>
+		<input class="form-control" type="text" ng-model="locador.cpf" name="cpf" ng-required="true" placeholder="CFP" />
+	</div>
+
+	<div class="form-group col-md-3 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">RG</label>
+		<input class="form-control" type="text" ng-model="locador.rg" name="rg" ng-required="true" placeholder="RG" />
+	</div>
+
+	<div class="form-group col-md-2 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Orgão Emissor</label>
+		<input class="form-control" type="text" ng-model="locador.emissor" name="emissor" ng-required="true" placeholder="Emissor"/>
+	</div>
+
+	<div class="form-group col-md-1 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">UF</label>
+		<input class="form-control" type="text" ng-model="locador.uf" name="uf" ng-required="true" placeholder="UF" />
+	</div>
+
+	<div class="form-group col-md-2 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Naturalidade</label>
+		<input class="form-control" type="text" ng-model="locador.naturalidade" name="naturalidade" ng-required="true" placeholder="Naturalidade"/>
+	</div>
+
+	<div class="form-group col-md-5 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Nome do Pai</label>
+		<input class="form-control" type="text" ng-model="locador.pai" name="pai" ng-required="true" placeholder="Nome do pai"/>
+	</div>
+	<div class="form-group col-md-5 col-sm-12 col-xs-12">
+		<label class="align-text-bottom">Nome da Mãe</label>
+		<input class="form-control" type="text" ng-model="locador.mae" name="mae" ng-required="true" placeholder="Nome do mae"/>
+	</div>
+</form>
+
+<div class="form-group col-md-12 col-sm-12 col-xs-12"><hr/></div>
+<div class="form-group col-md-12 col-sm-12 col-xs-12 alert alert-danger" role="alert">Endereço</div>
+
+<form name="enderecoForm">
+	<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Logradouro</label>
+		<input class="form-control" type="text" ng-model="endereco.logradouro" name="logradouro" ng-required="true" placeholder="Logradouro"/>
+	</div>
+	<div class="form-group col-md-2 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Número</label>
+		<input class="form-control" type="text" ng-model="endereco.numero" name="numero" ng-required="true" placeholder="Número"/>
+	</div>
+	<div class="form-group col-md-4 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Bairro</label>
+		<input class="form-control" type="text" ng-model="endereco.bairro" name="bairro" ng-required="true" placeholder="Bairro"/>
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Cidade</label>
+		<input class="form-control" type="text" ng-model="endereco.cidade" name="cidade" ng-required="true" placeholder="Cidade"/>
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">CEP</label>
+		<input class="form-control" type="text" ng-model="endereco.cep" name="cep" ng-required="true" placeholder="CEP" />
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">UF</label>
+		<input class="form-control" type="text" ng-model="endereco.uf" name="uf" ng-required="true" placeholder="UF" />
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Complemento</label>
+		<input class="form-control" type="text" ng-model="endereco.complemento" name="complemento" ng-required="true" placeholder="Complemento"	/>
+	</div>
+</form>
+
+<div class="form-group col-md-12 col-sm-12 col-xs-12"><hr/></div>
+<div class="form-group col-md-12 col-sm-12 col-xs-12 alert alert-danger" role="alert">Contato</div>
+
+<form name="contatoForm">
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Telefone Fixo</label>
+		<input class="form-control" type="text" ng-model="contato.fixo" name="fixo" ng-required="true" placeholder="Telefone fixo"
+		/>
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Celular</label>
+		<input class="form-control" type="text" ng-model="contato.celular" name="celular" ng-required="true" placeholder="Celular"
+		/>
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">E-mail</label>
+		<input class="form-control" type="text" ng-model="contato.email" name="email" ng-required="true" placeholder="Email" />
+	</div>
+	<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+		<label class="align-text-bottom">Recado</label>
+		<input class="form-control" type="text" ng-model="contato.recado" name="recado" ng-required="true" placeholder="Recado" />
+	</div>
+</form>
+
+<div class="form-group col-md-12 col-sm-12 col-xs-12">
+	<hr/>
+</div>
+
+<div class="form-group col-md-12 col-sm-12 col-xs-12">
+	<button class="btn btn-danger btn-block" ng-click="adicionarLocador(locador, endereco, contato)" ng-disabled="locadorForm.$invalid">Salvar</button>
+	<a class="btn btn-success btn-block" href="#/inicio">Voltar</a>
+</div>

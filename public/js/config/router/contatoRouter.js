@@ -10,7 +10,7 @@ angular.module("app").config(function ($routeProvider) {
 		}			
 	});
 
-	$routeProvider.when("/contatoEdit/:id", {
+	$routeProvider.when("/contatoEdit/:id/:user_tipo", {
 		templateUrl: "view/contato/contatoEdit.html",
 		controller: "contatoEditCtrl",
 		resolve: {
@@ -19,7 +19,11 @@ angular.module("app").config(function ($routeProvider) {
 			},
 			pessoaId: function ($route) {				
 				return $route.current.params.id;
+			},
+			user_tipo:function($route){
+				return $route.current.params.user_tipo;
 			}
+
 		}
 	});	
 	

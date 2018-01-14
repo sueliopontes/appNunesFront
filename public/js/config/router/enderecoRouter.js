@@ -10,7 +10,7 @@ angular.module("app").config(function ($routeProvider) {
 		}				
 	});
 
-	$routeProvider.when("/enderecoEdit/:id", {
+	$routeProvider.when("/enderecoEdit/:id/:user_tipo", {
 		templateUrl: "view/endereco/enderecoEdit.html",
 		controller: "enderecoEditCtrl",
 		resolve: {
@@ -19,6 +19,9 @@ angular.module("app").config(function ($routeProvider) {
 			},
 			pessoaId: function ($route) {				
 				return $route.current.params.id;
+			},
+			user_tipo:function($route){
+				return $route.current.params.user_tipo;
 			}
 		}
 	});	

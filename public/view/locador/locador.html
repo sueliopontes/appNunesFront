@@ -1,4 +1,7 @@
-<div>	
+<div>
+	<div ng-show="!locadores.data.length > 0" class="alert alert-danger" role="alert">
+		Nenhum registro de locador encontrado!
+	</div>	
 	<div ng-show="locadores.data.length > 0" class="alert alert-danger" role="alert">
 		Locador
 	</div>
@@ -15,13 +18,13 @@
 		<tr ng-repeat="locador in locadores.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
 			
 			<td>
-				<a href="">{{locador.nome |name}}</a>
+				{{locador.nome |name}}
 			</td>
 			<td>
-				<a href="">{{locador.cpf}}</a>
+				{{locador.cpf}}
 			</td>
 			<td>
-				<a href="">{{locador.rg}}</a>
+				{{locador.rg}}
 			</td>
 			<td>
 				<a href="#/locadorEdit/{{locador.id}}">Visualizar</a>
@@ -34,5 +37,6 @@
 	</table>
 	<hr/>
 	<a class="btn btn-primary btn-block" href="#/locadorNew">Adicionar</a>
+	<a class="btn btn-success btn-block" href="#/inicio">Voltar</a>
 
 </div>

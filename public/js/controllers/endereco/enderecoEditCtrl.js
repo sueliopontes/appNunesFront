@@ -1,4 +1,4 @@
-angular.module("app").controller("enderecoEditCtrl", function ($timeout,$scope, pessoaId, endereco, enderecoAPI,$location) {
+angular.module("app").controller("enderecoEditCtrl", function (user_tipo,$timeout,$scope, pessoaId, endereco, enderecoAPI,$location) {
 	$scope.endereco = endereco.data;
 	$scope.pessoaId=pessoaId;
 	$scope.msg="vazio";
@@ -14,5 +14,14 @@ angular.module("app").controller("enderecoEditCtrl", function ($timeout,$scope, 
 			}, 2500); // delay 250 ms
 
 		});
+	};
+	$scope.voltar = function () {		
+		console.log(user_tipo);
+		if(user_tipo=="1"){
+			$location.path("/locatarioEdit/"+pessoaId);		
+		}else{
+			$location.path("/locadorEdit/"+pessoaId);		
+		}
+		
 	};
 });

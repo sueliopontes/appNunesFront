@@ -5,10 +5,9 @@ angular.module("app").controller("locadorNewCtrl", function ($scope,pessoaAPI,$l
             pessoaAPI.savePessoa(locador).success(function (data) {
                 //delete $scope.locador;
                 //$scope.locadorForm.$setPristine();
-                $location.path("/enderecoNew/"+data.data.id);
+                $location.path("/locadorEdit/"+data.data.id);
             });
         };	
         
-    });
-
+    });    
     

@@ -1,4 +1,4 @@
-angular.module("app").controller("contatoEditCtrl", function ($timeout,$scope, $routeParams, pessoaId,contato,contatoAPI,$location) {
+angular.module("app").controller("contatoEditCtrl", function (user_tipo,pessoaAPI, $timeout,$scope, $routeParams, pessoaId,contato,contatoAPI,$location) {
 	$scope.contato = contato.data;
 	$scope.pessoaId=pessoaId;
 	$scope.msg="vazio";
@@ -15,5 +15,14 @@ angular.module("app").controller("contatoEditCtrl", function ($timeout,$scope, $
 			}, 2500); // delay 250 ms
 
 		});
+	};
+	$scope.voltar = function () {		
+		console.log(user_tipo);
+		if(user_tipo=="1"){
+			$location.path("/locatarioEdit/"+pessoaId);		
+		}else{
+			$location.path("/locadorEdit/"+pessoaId);		
+		}
+		
 	};
 });

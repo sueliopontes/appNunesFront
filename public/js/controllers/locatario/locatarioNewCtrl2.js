@@ -7,22 +7,19 @@ angular.module("app").controller("locatarioNewCtrl2", function ($scope, $locatio
             pessoaId = data.data.id;
             banco.user_id = pessoaId;           
             bancoAPI.saveBanco(banco).success(function (data) {
-                banco.user_id = pessoaId;
-                bancoAPI.saveBanco(banco).success(function (data) {
-                    conjuge.user_id = pessoaId;
-                    conjugeAPI.saveConjuge(conjuge).success(function (data) {
-                        contato.user_id = pessoaId;
-                        contatoAPI.saveContato(contato).success(function (data) {
-                            endereco.user_id = pessoaId;
-                            enderecoAPI.saveEndereco(endereco).success(function (data) {
+               conjuge.user_id = pessoaId;
+                conjugeAPI.saveConjuge(conjuge).success(function (data) {
+                    contato.user_id = pessoaId;
+                    contatoAPI.saveContato(contato).success(function (data) {
+                        endereco.user_id = pessoaId;
+                        enderecoAPI.saveEndereco(endereco).success(function (data) {
                             ocupacao.user_id = pessoaId;
-                                ocupacaoAPI.saveOcupacao(ocupacao).success(function (data) {
-                                    rc.user_id = pessoaId;
-                                    rcAPI.saveRC(rc).success(function (data) {
-                                        rp.user_id = pessoaId;
-                                        rpAPI.saveRP(rp).success(function (data) {
-                                            $location.path("/locatarioEdit/" + pessoaId);
-                                        });
+                            ocupacaoAPI.saveOcupacao(ocupacao).success(function (data) {
+                                rc.user_id = pessoaId;
+                                rcAPI.saveRC(rc).success(function (data) {
+                                    rp.user_id = pessoaId;
+                                    rpAPI.saveRP(rp).success(function (data) {
+                                        $location.path("/locatarioEdit/" + pessoaId);                            
                                     });
                                 });
                             });

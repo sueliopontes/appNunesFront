@@ -1,8 +1,8 @@
 <div ng-show="!endereco.data.length > 0" class="alert alert-danger" role="alert">
     Nenhum registro de endereço encontrado!
     <hr>
-	<a class="btn btn-primary btn-block" href="#/enderecoNew/{{pessoaId}}">Adicionar</a>
-	<a class="btn btn-success btn-block" href="#/locatarioEdit/{{pessoaId}}">Voltar</a>
+	<a class="btn btn-primary btn-block" href="#/enderecoNew/{{pessoaId}}">Adicionar</a>	
+	<button class="btn btn-success btn-block" ng-click="voltar()">Voltar</button>	
 
 </div>
 <div ng-show="endereco.data.length > 0">
@@ -47,5 +47,5 @@
 		<div  class="alert alert-success" role="alert">{{msg}}	</div>
 	</div>
 	<button class="btn btn-danger btn-block" ng-click="saveEndereco(endereco.data[0])" ng-disabled="endereco.data[0].dataForm.$invalid">Salvar</button>
-	<a class="btn btn-success btn-block" href="#/locatarioEdit/{{pessoaId}}">Voltar</a>
+	<button class="btn btn-success btn-block" ng-click="voltar()">Voltar</button>	
 </div>

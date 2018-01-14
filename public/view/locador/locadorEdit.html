@@ -57,10 +57,10 @@
 			<button class="btn btn-danger btn-block" ng-click="saveLocador(locador.data)" ng-disabled="locador.dataForm.$invalid">Salvar</button>
 		</div>		
 		<div class="form-group col-md-2 col-sm-2">
-			<a class="btn btn-block aLink" href="#/enderecoEdit/{{locador.data.id}}">Endereço</a>
+			<a class="btn btn-block aLink" href="#/enderecoEdit/{{locador.data.id}}/{{locador.data.user_tipo}}">Endereço</a>
 		</div>
 		<div class="form-group col-md-2 col-sm-2">
-			<a class="btn btn-block aLink" href="#/contatoEdit/{{locador.data.id}}">Contatos</a>
+			<a class="btn btn-block aLink" href="#/contatoEdit/{{locador.data.id}}/{{locador.data.user_tipo}}">Contatos</a>
 		</div>
 	</form>
 </div>

@@ -6,7 +6,7 @@ angular.module("app").controller("locatarioNewCtrl", function ($scope,pessoaAPI,
                 //delete $scope.locatario;
                // $scope.locatarioForm.$setPristine();
                // $location.path("/locatario");
-                $location.path("/enderecoNew/"+data.data.id);
+                $location.path("/locatarioEdit/"+data.data.id);
             });
         };	
         

@@ -1,7 +1,7 @@
-angular.module("app").controller("painelCtrl", function ($scope, locadores,locatarios,imoveis,$location) {	
+angular.module("app").controller("painelCtrl", function ($scope, locadores,locatarios,$location) {	
 	$scope.locadores = locadores.data.data;
 	$scope.locatarios = locatarios.data.data;
-	$scope.imoveis = imoveis.data.data;
+	$scope.imoveis = {};
 	
 	$scope.pagamentos = {};//pagamentos.data.data;
 	$scope.repasses = {};//repasses.data.data;

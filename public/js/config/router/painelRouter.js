@@ -2,10 +2,7 @@ angular.module("app").config(function ($routeProvider) {
 	$routeProvider.when("/inicio", {
 		templateUrl: "view/inicio.html",
 		controller: "painelCtrl",
-		resolve: {
-			imoveis:function(imoveisAPI) {
-				return imoveisAPI.getImoveis();
-			},
+		resolve: {			
 			locatarios:function(pessoaAPI) {
 				return pessoaAPI.getLocatarios();
 			},

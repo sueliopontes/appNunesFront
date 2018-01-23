@@ -1,4 +1,4 @@
-angular.module("app").controller("painelCtrl", function ($scope, locadores,locatario,imoveis,$location) {	
+angular.module("app").controller("painelCtrl", function ($scope, locadores,locatarios,imoveis,$location) {	
 	$scope.locadores = locadores.data.data;
 	$scope.locatarios = locatarios.data.data;
 	$scope.imoveis =  imoveis.data.data;

@@ -1,11 +1,14 @@
 angular.module("app").config(function ($routeProvider) {
 
-	$routeProvider.when("/contatoNew/:id", {
+	$routeProvider.when("/contatoNew/:id/:user_tipo", {
 		templateUrl: "view/contato/contatoNew.html",
 		controller: "contatoNewCtrl",
 		resolve: {			
 			pessoaId: function ($route) {				
 				return $route.current.params.id;
+			},
+			user_tipo:function($route){
+				return $route.current.params.user_tipo;
 			}
 		}			
 	});

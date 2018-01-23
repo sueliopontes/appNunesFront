@@ -11,7 +11,7 @@ angular.module("app").controller("rcEditCtrl", function ($timeout,$scope, $route
 			$scope.msg="Cadastro salvo com sucesso!!";			
 			var tempo = $timeout(function() {
 				$scope.msg="vazio";
-			}, 2500); // delay 250 ms
+			}, 1500); // delay 250 ms
 
 			
 		});

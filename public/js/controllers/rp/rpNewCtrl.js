@@ -13,7 +13,7 @@ angular.module("app").controller("rpNewCtrl", function ($timeout,$scope,rpAPI,$l
                 var tempo = $timeout(function() {
                     $scope.msg="vazio";
                     $location.path("/rp/"+pessoaId);
-             }, 2500); // delay 250 ms
+             }, 1500); // delay 250 ms
             });
         };	
         

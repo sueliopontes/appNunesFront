@@ -10,7 +10,7 @@ angular.module("app").controller("bancoNewCtrl", function ($timeout,$scope,banco
 			        var tempo = $timeout(function() {
                     $scope.msg="vazio";
                     $location.path("/bancoEdit/"+pessoaId);  
-			    }, 2500); // delay 250 ms
+			    }, 1500); // delay 250 ms
                               
             });
         };	

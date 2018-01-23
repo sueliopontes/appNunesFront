@@ -1,6 +1,7 @@
 angular.module("app").controller("enderecoEditCtrl", function (user_tipo,$timeout,$scope, pessoaId, endereco, enderecoAPI,$location) {
 	$scope.endereco = endereco.data;
 	$scope.pessoaId=pessoaId;
+	$scope.user_tipo=user_tipo;
 	$scope.msg="vazio";
 
 	$scope.saveEndereco = function (endereco) {		
@@ -11,7 +12,7 @@ angular.module("app").controller("enderecoEditCtrl", function (user_tipo,$timeou
 			$scope.msg="Cadastro salvo com sucesso!!";			
 			var tempo = $timeout(function() {
 				$scope.msg="vazio";
-			}, 2500); // delay 250 ms
+			}, 1500); // delay 250 ms
 
 		});
 	};

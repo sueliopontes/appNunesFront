@@ -12,7 +12,7 @@ angular.module("app").controller("conjugeNewCtrl", function ($timeout,$scope,con
                 var tempo = $timeout(function() {
                     $scope.msg="vazio";
                     $location.path("/conjugeEdit/"+pessoaId); 
-             }, 2500); // delay 250 ms
+             }, 1500); // delay 250 ms
               
             });
         };	

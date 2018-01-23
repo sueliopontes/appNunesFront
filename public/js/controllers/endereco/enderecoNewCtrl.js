@@ -1,4 +1,4 @@
-angular.module("app").controller("enderecoNewCtrl", function ($timeout,$scope,enderecoAPI,$location,pessoaId) {	
+angular.module("app").controller("enderecoNewCtrl", function ($timeout,$scope,enderecoAPI,$location,pessoaId,user_tipo) {	
     $scope.msg="vazio";
          $scope.pessoaId=pessoaId;
     
@@ -12,8 +12,8 @@ angular.module("app").controller("enderecoNewCtrl", function ($timeout,$scope,en
                 $scope.msg="Cadastro salvo com sucesso!!";			
                 var tempo = $timeout(function() {
                     $scope.msg="vazio";
-                    $location.path("/enderecoEdit/"+pessoaId);
-             }, 2500); // delay 250 ms
+                    $location.path("/enderecoEdit/"+pessoaId+"/"+user_tipo);
+             }, 1500); // delay 250 ms
             });
         };	
         

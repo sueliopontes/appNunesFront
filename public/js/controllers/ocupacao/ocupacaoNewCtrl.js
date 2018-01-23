@@ -13,7 +13,7 @@ angular.module("app").controller("ocupacaoNewCtrl", function ($timeout,$scope,oc
                 var tempo = $timeout(function() {
                     $scope.msg="vazio";
                     $location.path("/ocupacaoEdit/"+pessoaId);
-             }, 2500); // delay 250 ms
+             }, 1500); // delay 250 ms
             });
         };	
         

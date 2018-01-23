@@ -1,11 +1,14 @@
 angular.module("app").config(function ($routeProvider) {
 
-	$routeProvider.when("/enderecoNew/:id", {
+	$routeProvider.when("/enderecoNew/:id/:user_tipo", {
 		templateUrl: "view/endereco/enderecoNew.html",
 		controller: "enderecoNewCtrl",
 		resolve: {			
 			pessoaId: function ($route) {				
 				return $route.current.params.id;
+			},
+			user_tipo:function($route){
+				return $route.current.params.user_tipo;
 			}
 		}				
 	});

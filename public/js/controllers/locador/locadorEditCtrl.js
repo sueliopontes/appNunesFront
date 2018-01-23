@@ -10,7 +10,7 @@ angular.module("app").controller("locadorEditCtrl", function ($timeout,$scope, $
 			$scope.msg="Cadastro salvo com sucesso!!";			
 			var tempo = $timeout(function() {
 				$scope.msg="vazio";
-			}, 2500); // delay 250 ms
+			}, 1500); // delay 250 ms
 
 			
 		});

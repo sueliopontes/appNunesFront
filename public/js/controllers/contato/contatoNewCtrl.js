@@ -1,4 +1,4 @@
-angular.module("app").controller("contatoNewCtrl", function ($timeout,$scope,contatoAPI,$location,pessoaId) {	
+angular.module("app").controller("contatoNewCtrl", function ($timeout,$scope,contatoAPI,$location,pessoaId,user_tipo) {	
     $scope.msg="vazio";
     $scope.pessoaId=pessoaId;
        
@@ -12,9 +12,9 @@ angular.module("app").controller("contatoNewCtrl", function ($timeout,$scope,con
             $scope.msg="Cadastro salvo com sucesso!!";			
             var tempo = $timeout(function() {
                 $scope.msg="vazio";
-                $location.path("/contatoEdit/"+pessoaId);
+                $location.path("/contatoEdit/"+pessoaId+"/"+user_tipo);
            
-            }, 2500); // delay 250 ms
+            }, 1500); // delay 250 ms
 
             });
         };	

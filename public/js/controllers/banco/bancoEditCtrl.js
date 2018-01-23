@@ -8,7 +8,7 @@ angular.module("app").controller("bancoEditCtrl", function ($scope, $routeParams
 			$scope.msg="Cadastro salvo com sucesso!!";			
 			var tempo = $timeout(function() {
 				$scope.msg="vazio";
-			}, 2500); // delay 250 ms
+			}, 1500); // delay 250 ms
 
 			//delete $scope.banco;			
 			//$scope.contatoForm.$setPristine();

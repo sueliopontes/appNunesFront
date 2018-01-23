@@ -1,6 +1,7 @@
 angular.module("app").controller("contatoEditCtrl", function (user_tipo,pessoaAPI, $timeout,$scope, $routeParams, pessoaId,contato,contatoAPI,$location) {
 	$scope.contato = contato.data;
 	$scope.pessoaId=pessoaId;
+	$scope.user_tipo=user_tipo;
 	$scope.msg="vazio";
 	
 	$scope.saveContato = function (contato) {		
@@ -12,7 +13,7 @@ angular.module("app").controller("contatoEditCtrl", function (user_tipo,pessoaAP
 			$scope.msg="Cadastro salvo com sucesso!!";			
 			var tempo = $timeout(function() {
 				$scope.msg="vazio";
-			}, 2500); // delay 250 ms
+			}, 1500); // delay 250 ms
 
 		});
 	};

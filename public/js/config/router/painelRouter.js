@@ -9,7 +9,10 @@ angular.module("app").config(function ($routeProvider) {
 			locadores:function(pessoaAPI) {
 				return pessoaAPI.getLocadores();
 			}
-			
+			,
+			imoveis:function(imoveisAPI) {
+				return imoveisAPI.getImoveis();
+			}
 		}
 	});	
 	

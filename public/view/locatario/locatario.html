@@ -1,13 +1,13 @@
 <div>
-	<div ng-show="!locatarios.data.length > 0" class="alert alert-danger" role="alert">
+	<div ng-show="!locatarios.length > 0" class="alert alert-danger" role="alert">
 		Nenhum registro de locatário encontrado!
 	</div>
-	<div ng-show="locatarios.data.length > 0" class="alert alert-danger" role="alert">
+	<div ng-show="locatarios.length > 0" class="alert alert-danger" role="alert">
 		Locatário
 	</div>
 
 	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?" />
-	<table ng-show="locatarios.data.length > 0" class="table table-striped">
+	<table ng-show="locatarios.length > 0" class="table table-striped">
 		<tr>			
 			<th>Nome</th>
 			<th>CPF</th>
@@ -15,7 +15,7 @@
 			<th colspan="2"><center>Opções</center></th>
 			
 		</tr>
-		<tr ng-repeat="locatario in locatarios.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+		<tr ng-repeat="locatario in locatarios | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
 			
 			<td>
 				{{locatario.nome |name}}

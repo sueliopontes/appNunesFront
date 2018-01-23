@@ -11,7 +11,12 @@ angular.module("app").config(function ($routeProvider) {
 	});
 	$routeProvider.when("/imoveisNew", {
 		templateUrl: "view/imoveis/imoveisNew.html",
-		controller: "imoveisNewCtrl"			
+		controller: "imoveisNewCtrl",
+		resolve: {			
+			locadores:function(pessoaAPI) {
+				return pessoaAPI.getLocadores();
+			}
+		}			
 	});
 
 	$routeProvider.when("/imoveisEdit/:id", {
@@ -20,6 +25,9 @@ angular.module("app").config(function ($routeProvider) {
 		resolve: {
 			imovel: function (imoveisAPI, $route) {
 				return imoveisAPI.getImovel($route.current.params.id);
+			},
+			locadores:function(pessoaAPI) {
+				return pessoaAPI.getLocadores();
 			}
 		}
 	});	

@@ -1,15 +1,15 @@
 <div>
 
-	<div ng-show="!rps.data.length > 0" class="alert alert-danger" role="alert">
+	<div ng-show="!rps.length > 0" class="alert alert-danger" role="alert">
 
 		Nenhum registro de referência pessoal encontrado!
 
 	</div>
-	<div ng-show="rps.data.length > 0" class="alert alert-danger" role="alert">
+	<div ng-show="rps.length > 0" class="alert alert-danger" role="alert">
 		Referência pessoal
 	</div>
 
-	<table ng-show="rps.data.length > 0" class="table table-striped">
+	<table ng-show="rps.length > 0" class="table table-striped">
 		<tr>			
 			<th>
 				<a href="" ng-click="ordenarPor('nome')">Nome</a>
@@ -22,7 +22,7 @@
 			</th>
 			<th colspan="2"></th>			
 		</tr>
-		<tr ng-repeat="rp in rps.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+		<tr ng-repeat="rp in rps | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
 			
 			<td>
 				<a href="">{{rp.nome |name}}</a>

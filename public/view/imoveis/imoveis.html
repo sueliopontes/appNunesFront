@@ -1,45 +1,26 @@
 <div>
-	<div ng-show="!imoveis.data.length > 0" class="alert alert-danger" role="alert">
+	<div ng-show="!imoveis.length > 0" class="alert alert-danger" role="alert">
 
 		Nenhum registro de imóvel encontrado!
 
 	</div>
-	<div ng-show="imoveis.data.length > 0" class="alert alert-danger" role="alert">
+	<div ng-show="imoveis.length > 0" class="alert alert-danger" role="alert">
 		Imóveis
 	</div>
-	<table ng-show="imoveis.data.length > 0" class="table table-striped">
+	<table ng-show="imoveis.length > 0" class="table table-striped">
 		<tr>			
-			<th>
-				<a href="" ng-click="ordenarPor('imovel_id')">Código</a>
-			</th>
-			<th>
-				<a href="" ng-click="ordenarPor('imovel_locador_id')">Locador</a>
-			</th>
-			<th>
-				<a href="" ng-click="ordenarPor('imovel_id')">Bairro</a>
-			</th>
-			<th>
-				<a href="" ng-click="ordenarPor('imovel_locador_id')">Endereço</a>
-			</th>
-			
-			<th></th>
-			<th></th>
+			<th>Código</th>
+			<th>Locador</th>
+			<th>Bairro</th>
+			<th>Endereço/th>
+			<th colspan="2"><center>Opções</center></th>			
 		</tr>
-		<tr ng-repeat="imovel in imoveis.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+		<tr ng-repeat="imovel in imoveis | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
 			
-			<td>
-				<a href="">{{imovel.id}}</a>
-			</td>
-			<td>
-				<a href="">{{imovel.nome}}</a>
-			</td>
-			<td>
-				<a href="">{{imovel.bairro}}</a>
-			</td>
-			<td>
-				<a href="">{{imovel.logradouro}},{{imovel.numero}}</a>
-			</td>
-			
+			<td>{{imovel.id}}</td>
+			<td>{{imovel.nome}}</td>
+			<td>{{imovel.bairro}}</td>
+			<td>{{imovel.logradouro}},{{imovel.numero}}</td>			
 			<td>
 				<a href="#/imoveisEdit/{{imovel.id}}">Visualizar</a>
 			</td>
@@ -51,5 +32,6 @@
 	</table>
 	<hr/>
 	<a class="btn btn-primary btn-block" href="#/imoveisNew/{{locatarioId}}">Adicionar</a>
+	<a class="btn btn-success btn-block" href="#/inicio">Voltar</a>
 
 </div>

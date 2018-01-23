@@ -4,26 +4,81 @@
 	</div>
 
 	<form name="imovelForm">
-		<label class="align-text-bottom">Código do imovel</label>
-		<input class="form-control" type="text" ng-model="imovel.data.id" name="id" ng-required="true" placeholder="Código do imovel" />
-		 <label class="align-text-bottom">Inscrição IPTU</label>
-		 <input class="form-control" type="text" ng-model="imovel.data.iptu" name="iptu" ng-required="true" placeholder="Inscrição IPTU" />
-		 <label class="align-text-bottom">RGI - Água</label>
-		<input class="form-control" type="text" ng-model="imovel.data.agua" name="agua" ng-required="true" placeholder="RGI -Água" />
-		 <label class="align-text-bottom">Código EDP - Energia Elétrica</label>
-		<input class="form-control" type="text" ng-model="imovel.data.luz" name="luz" ng-required="true" placeholder="Código EDP - Energia Elétrica" />
-		<label class="align-text-bottom">Observação</label>
-		<input class="form-control" type="text" ng-model="imovel.data.obs" name="obs" ng-required="true" placeholder="Observação" />
-		 <div class="form-group col-md-12 col-sm-12 col-xs-12">
+		<div class="form-group col-md-12 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Locador</label>
+			<select class="form-control" ng-model="imovel.data[0].user_id" ng-options="locador.id as locador.nome for locador in locadores.data | orderBy:'nome'" name="locador_id" ng-required="true"></select>
+		</div>
+		<!--
+		<div class="form-group col-md-12 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Locador</label>		
+			<input class="form-control" type="text" ng-model="imovel.data[0].user_id" name="locador_id" ng-required="true" placeholder="Locador" />
+		</div>		
+	-->
+		<div class="form-group col-md-4 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Inscrição IPTU</label>
+			<input class="form-control" type="text" ng-model="imovel.data[0].iptu" name="iptu" ng-required="true" placeholder="Inscrição IPTU" />
+		</div>
+		<div class="form-group col-md-4 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">RGI - Água</label>
+			<input class="form-control" type="text" ng-model="imovel.data[0].agua" name="agua" ng-required="true" placeholder="RGI -Água" />
+		</div>
+		<div class="form-group col-md-4 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Código EDP - Energia Elétrica</label>
+			<input class="form-control" type="text" ng-model="imovel.data[0].luz" name="luz" ng-required="true" placeholder="Código EDP - Energia Elétrica" />
+		</div>
+		<div class="form-group col-md-12 col-sm-12 col-xs-12 pl-0">
+			<label class="align-text-bottom">Observação</label>
+			<input class="form-control" type="text" ng-model="imovel.data[0].obs" name="obs" ng-required="true" placeholder="Observação" />
+		</div> 
+		
+		
+		<div class="form-group col-md-12 col-sm-12 col-xs-12">
 			<hr/>
 		</div>
 
-		<div class="form-group col-md-12 col-sm-12 col-xs-12">
+		<div class="form-group col-md-6 col-sm-12 col-xs-12 pl-0">
+				<label class="align-text-bottom">Logradouro</label>
+				<input class="form-control" type="text" ng-model="imovel.data[0].logradouro" name="logradouro" ng-required="true" placeholder="Logradouro" />
+			</div>
+			<div class="form-group col-md-2 col-sm-12 col-xs-12 pl-0">
+				<label class="align-text-bottom">Número</label>
+				<input class="form-control" type="text" ng-model="imovel.data[0].numero" name="numero" ng-required="true" placeholder="Número" />
+			</div>
+	
+			<div class="form-group col-md-4 col-sm-12 col-xs-12 pl-0">	
+				<label class="align-text-bottom">Bairro</label>
+				<input class="form-control" type="text" ng-model="imovel.data[0].bairro" name="bairro" ng-required="true" placeholder="Bairro" />
+			</div>
+	
+			<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+				<label class="align-text-bottom">Cidade</label>
+				<input class="form-control" type="text" ng-model="imovel.data[0].cidade" name="cidade" ng-required="true"  placeholder="Cidade" />
+			</div>
 			
-			<button class="btn btn-danger btn-block" ng-click="saveImovel(imovel.data.id,imovel.data)" ng-disabled="imovel.dataForm.$invalid">Salvar</button>
-		</div>
-		 
-		<div class="form-group col-md-2 col-sm-2"><a class="btn btn-block aLink" href="#/endereco3/{{imovel.data.id}}">Endereço</a>
+			<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+				<label class="align-text-bottom">CEP</label>
+				<input class="form-control" type="text" ng-model="imovel.data[0].cep" name="cep" ng-required="true" placeholder="CEP" />
+			</div>
+	
+			<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+				<label class="align-text-bottom">UF</label>
+				<input class="form-control" type="text" ng-model="imovel.data[0].uf" name="uf" ng-required="true"  placeholder="UF"/>
+			</div>
+			
+			<div class="form-group col-md-3 col-sm-12 col-xs-12 pl-0">
+				<label class="align-text-bottom">Complemento</label>
+				<input class="form-control" type="text" ng-model="imovel.data[0].complemento" name="complemento" ng-required="true" placeholder="Complemento"/>
+			</div>
+			<div class="form-group col-md-12 col-sm-12 col-xs-12">
+				<hr/>
+			</div>
+
+		<div class="form-group col-md-12 col-sm-12 col-xs-12">			
+			<button class="btn btn-danger btn-block" ng-click="saveImovel(imovel.data[0].id,imovel.data[0])" ng-disabled="imovel.dataForm.$invalid">Salvar</button>
+		</div>		 
+		
+		<div class="form-group col-md-12 col-sm-2">
+			<a class="btn btn-success btn-block" href="#/imoveis">Voltar</a>
 		</div>
 
 	</form>

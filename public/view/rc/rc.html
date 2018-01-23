@@ -1,15 +1,15 @@
 <div>
 
-	<div ng-show="!rcs.data.length > 0" class="alert alert-danger" role="alert">
+	<div ng-show="!rcs.length > 0" class="alert alert-danger" role="alert">
 
 		Nenhum registro de referência comercial encontrado!
 
 	</div>
-	<div ng-show="rcs.data.length > 0" class="alert alert-danger" role="alert">
+	<div ng-show="rcs.length > 0" class="alert alert-danger" role="alert">
 		Referência comercial
 	</div>
 
-	<table ng-show="rcs.data.length > 0" class="table table-striped">
+	<table ng-show="rcs.length > 0" class="table table-striped">
 		<tr>			
 			<th>
 				<a href="" ng-click="ordenarPor('nome')">Empresa</a>
@@ -22,7 +22,7 @@
 			</th>
 			<th colspan="2"></th>			
 		</tr>
-		<tr ng-repeat="rc in rcs.data | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+		<tr ng-repeat="rc in rcs | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
 			
 			<td>
 				<a href="">{{rc.empresa |name}}</a>
